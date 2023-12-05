@@ -11,6 +11,7 @@ struct HomeScreenView: View {
     @ObservedObject var viewModel = HomeViewModel()
 
     var body: some View {
+        
         NavigationView{
             ScrollView {
                 HStack {
@@ -24,7 +25,7 @@ struct HomeScreenView: View {
                         VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, content: {
                             Text("30C")
                             Text("AQI 50")
-                        })// Adjust the height as needed
+                        })
                     })
                 }.padding()
                 
@@ -79,11 +80,23 @@ struct HomeScreenView: View {
                     }
                     DottedDivider().padding()
                     VStack{
-                        HStack{
-                            Text(homeData.mainLink?.titleID ?? "").font(.system(size: 24)).bold()
-                            Spacer()
+                        Group{
+                            HStack{
+                                Text(homeData.mainLink?.titleID ?? "").font(.system(size: 24)).bold()
+                                Spacer()
+                            }
                         }
-                        NavigationLink(destination: DashboardView()) {
+                       
+                        NavigationLink(destination: AnyView(WebView(urlString: homeData.mainLink?.url ?? "" ) .navigationBarTitle(homeData.mainLink?.titleID ?? "", displayMode: .inline)
+                            .navigationBarBackButtonHidden(true)
+                            .navigationBarItems(
+                                leading:CustomBackButton(),
+                                trailing: HStack {
+                                    Image("home").foregroundColor(.black)
+                                            .imageScale(.large)
+                                    
+                                }
+                            ))) {
                             AsyncImage(url: URL(string: homeData.mainLink?.thumbnail ?? "")) { phase in
                                 switch phase {
                                 case .success(let image):
@@ -109,43 +122,196 @@ struct HomeScreenView: View {
                             Text(homeData.mainLink?.subtitleID ?? "").font(.system(size: 16))
                             Spacer()
                         }
+                        Group{
+                            DottedDivider().padding()
+                            HStack{
+                                Text(homeData.section1?.titleID ?? "").font(.system(size: 24)).bold()
+                                Spacer()
+                            }
+                        }
+                            
+                 
+                                            LazyVGrid(columns: Array(repeating: GridItem(), count: 2), spacing: 4) {
+                                                if let section1 = homeData.section1 {
+                                         if let contents = section1.contents {
+                                                                       ForEach(contents, id: \.id) { content in
+                                                                           VStack(alignment: .leading){
+                                                                               AsyncImage(url: URL(string: content.thumbnail ?? "")) { phase in
+                                                                                               switch phase {
+                                                                                               case .success(let image):
+                                                                                                   image
+                                                                                                       .resizable()
+                                                                                                       .scaledToFit()
+                                                                                                       .onTapGesture {
+                                                                                                           openURLInBrowser(content.mapLink ?? "")
+                                                                                                       }
+                                                                                               case .failure(_):
+                                                                                                   Image(systemName: "exclamationmark.icloud")
+                                                                                                       .resizable()
+                                                                                                       .scaledToFit()
+                                                                                                       .foregroundColor(.red)
+                                                                                               case .empty:
+                                                                                                   ProgressView()
+                                                                                               @unknown default:
+                                                                                                   EmptyView()
+                                                                                               }
+                                                                                           }
+                                                                                           .frame(width: 158, height: 159)
+                                                            Text(" \(content.tourismCategoryTitleID ?? "")")
+                                                                               Text(" \(content.titleID ?? "")")                                 }
+                            
+                                        }
+                                                                   }
+                                                               }
+                        
+                                            }
                         DottedDivider().padding()
                         HStack{
-                            Text(homeData.section1?.titleID ?? "").font(.system(size: 24)).bold()
+                            Text(homeData.section2?.titleID ?? "").font(.system(size: 24)).bold()
                             Spacer()
+                        }.padding()
+                        Group{
+                        ScrollView(.horizontal){
+                            HStack{
+                                if let section2 = homeData.section2 {
+                                    if let contents = section2.contents {
+                                        ForEach(0..<contents.count, id: \.self) { index in
+                                            VStack(alignment: .leading){
+                                                AsyncImage(url: URL(string: contents[index].thumbnail ?? "")) { phase in
+                                                    switch phase {
+                                                    case .success(let image):
+                                                        image
+                                                            .resizable()
+                                                                
+                                                            .cornerRadius(15)
+                                                            .frame(width: 256, height: 157)
+                                                            .onTapGesture {
+                                                                openURLInBrowser(contents[index].link ?? "")
+                                                            }
+                                                    case .failure(_):
+                                                        Image(systemName: "exclamationmark.icloud")
+                                                            .resizable()
+                                                            .scaledToFit()
+                                                            .foregroundColor(.red)
+                                                    case .empty:
+                                                        ProgressView()
+                                                    @unknown default:
+                                                        EmptyView()
+                                                    }
+                                                }
+                                               
+                                                Text(" \(contents[index].titleID ?? "")")
+                                                    .lineLimit(3)
+                                                                .truncationMode(.tail)
+                                                                .frame(width: 200)
+                                                Text(contents[index].formattedCreatedAt).foregroundColor(Color(
+                                                    red: Double(0xC6) / 255.0,
+                                                    green: Double(0x9A) / 255.0,
+                                                    blue: Double(0x5A) / 255.0
+                                                ))
+
+                                                
+                                            }
+                                        
+                                        }
+                                        
+                                    }
+                                }
+                            }
+                            }
+                        }
+                        Group{
+                            DottedDivider().padding()
+                            VStack{
+                                HStack{
+                                    Text(homeData.contact?.titleID ?? "").font(.system(size: 24)).bold()
+                                    Spacer()
+                                }
+                                AsyncImage(url: URL(string: homeData.contact?.thumbnail ?? "")) { phase in
+                                    switch phase {
+                                    case .success(let image):
+                                        image
+                                            .resizable()
+                                                
+                                            .cornerRadius(5)
+                                            .frame( height: 207)
+                                            
+                                    case .failure(_):
+                                        Image(systemName: "exclamationmark.icloud")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .foregroundColor(.red)
+                                    case .empty:
+                                        ProgressView()
+                                    @unknown default:
+                                        EmptyView()
+                                    }
+                                }
+
+                            }
+                            
+                        }
+                        Group{
+                            DottedDivider().padding()
+                            Text("Nusantara di media sosial")
+                            HStack{
+                                ForEach(homeData.socialMedias ?? [], id: \.id) { sosial in
+                                            VStack(alignment: .leading){
+                                                AsyncImage(url: URL(string: sosial.icon ?? "")) { phase in
+                                                    switch phase {
+                                                    case .success(let image):
+                                                        image
+                                                            .resizable()
+                                                                
+                                                            .cornerRadius(15)
+                                                            .frame(width: 36, height: 37)
+                                                            .onTapGesture {
+                                                                openURLInBrowser(sosial.permalink ?? "")
+                                                            }
+                                                    case .failure(_):
+                                                        Image(systemName: "exclamationmark.icloud")
+                                                            .resizable()
+                                                            .scaledToFit()
+                                                            .foregroundColor(.red)
+                                                    case .empty:
+                                                        ProgressView()
+                                                    @unknown default:
+                                                        EmptyView()
+                                                    }
+                                                }
+                                                }
+                                               
+                                               
+
+                                                
+                                            }
+                                        
+                                        }
+                        
+                                Button(action: {
+//                                    // Add your login logic here
+//                                    print("Login button tapped")
+                                }) {
+                                    Text("Kirim Saran dan Kritik")
+                                        .foregroundColor(.black)
+                                        .padding()
+                
+                                }.frame(width: 300)
+                                    .background(Color.white) // Background color
+                                               .cornerRadius(8) // Corner radius
+                                               .overlay(
+                                                   RoundedRectangle(cornerRadius: 8)
+                                                       .stroke(Color.gray, lineWidth: 2)
+                                               )
+                                               .padding()
+                              
+                            Button("Syarat dan Ketentuan Aplikasi") {
+                                print("Button tapped!")
+                            }.foregroundColor(Color.customColor)
+                        
                         }
                         
-                        
-                        Text("We have \(homeData.section1?.contents?.count ?? 0) menu items")
-//                                            LazyVGrid(columns: Array(repeating: GridItem(), count: 4), spacing: 4) {
-//                                                ForEach(homeData.section1?.contents ?? [], id:\.self) { item in
-//                                                    VStack{
-//                                                        AsyncImage(url: URL(string: item.icon ?? "")) { phase in
-//                                                            switch phase {
-//                                                            case .success(let image):
-//                                                                image
-//                                                                    .resizable()
-//                                                                    .scaledToFit()
-//                                                                    .frame(width: 50, height: 50)
-//                                                            case .failure:
-//                                                                Image(systemName: "photo")
-//                                                                    .resizable()
-//                                                                    .scaledToFit()
-//                                                                    .frame(width: 50, height: 50)
-//                                                            case .empty:
-//                                                                ProgressView()
-//                                                            @unknown default:
-//                                                                EmptyView()
-//                                                            }
-//                                                        }
-//                                                        Text(item.titleID ??  "?").font(.system(size: 12)).bold()
-//                        
-//                                                    }
-//                        
-//                                                }
-//                        
-//                                            }
-                        
+                    
                         
                     }.padding()
                     
@@ -164,6 +330,14 @@ struct HomeScreenView: View {
                     viewModel.fetchData()
                 }
     }
+    private func openURLInBrowser(_ urlString: String) {
+          if let url = URL(string: urlString), UIApplication.shared.canOpenURL(url) {
+              UIApplication.shared.open(url, options: [:], completionHandler: nil)
+          }
+      }
+}
+extension Color {
+    static let customColor = Color(red: 50/255, green: 114/255, blue: 103/255)
 }
 struct DottedDivider: View {
     var body: some View {

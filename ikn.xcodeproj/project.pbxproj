@@ -10,6 +10,7 @@
 		C988E8782B16D3CA00CDD650 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C988E8772B16D3CA00CDD650 /* HomeScreenView.swift */; };
 		C988E87A2B16D41400CDD650 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C988E8792B16D41400CDD650 /* HomeViewModel.swift */; };
 		C988E87D2B171B8B00CDD650 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C988E87C2B171B8B00CDD650 /* WebView.swift */; };
+		C991B04B2B1ED5F900B21CFE /* CarouselItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C991B04A2B1ED5F900B21CFE /* CarouselItem.swift */; };
 		C9A224892B19CEC3007CEAA5 /* LandmarkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A224882B19CEC3007CEAA5 /* LandmarkRow.swift */; };
 		C9C720512B0F0E0100B5AABA /* NetworkHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C720502B0F0E0100B5AABA /* NetworkHome.swift */; };
 		C9C7B1092B0DC88A00CE2C2D /* iknApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C7B1082B0DC88A00CE2C2D /* iknApp.swift */; };
@@ -25,6 +26,7 @@
 		C988E8772B16D3CA00CDD650 /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		C988E8792B16D41400CDD650 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		C988E87C2B171B8B00CDD650 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		C991B04A2B1ED5F900B21CFE /* CarouselItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselItem.swift; sourceTree = "<group>"; };
 		C9A224882B19CEC3007CEAA5 /* LandmarkRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkRow.swift; sourceTree = "<group>"; };
 		C9C720502B0F0E0100B5AABA /* NetworkHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHome.swift; sourceTree = "<group>"; };
 		C9C7B1052B0DC88A00CE2C2D /* ikn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ikn.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				C9A224882B19CEC3007CEAA5 /* LandmarkRow.swift */,
+				C991B04A2B1ED5F900B21CFE /* CarouselItem.swift */,
 			);
 			name = components;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9C7B10B2B0DC88A00CE2C2D /* ContentView.swift in Sources */,
+				C991B04B2B1ED5F900B21CFE /* CarouselItem.swift in Sources */,
 				C9C7B1092B0DC88A00CE2C2D /* iknApp.swift in Sources */,
 				C9C7B11D2B0DE18300CE2C2D /* DashboardView.swift in Sources */,
 				C988E87A2B16D41400CDD650 /* HomeViewModel.swift in Sources */,

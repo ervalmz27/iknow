@@ -128,7 +128,7 @@ struct Section2: Codable {
 }
 
 // MARK: - Section2_Content
-struct Section2_Content: Codable {
+struct Section2_Content: Codable,Identifiable {
     let id: Int?
     let thumbnail: String?
     let link: String?
@@ -142,6 +142,18 @@ struct Section2_Content: Codable {
         case titleEn = "title_en"
         case createdAt = "created_at"
         case updatedAt = "updated_at"
+    }
+    var formattedCreatedAt: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSS'Z'"
+        
+        if let createdAt = createdAt, let date = dateFormatter.date(from: createdAt) {
+            let outputDateFormatter = DateFormatter()
+            outputDateFormatter.dateFormat = "dd MMMM yyyy"
+            return outputDateFormatter.string(from: date)
+        } else {
+            return "Invalid Date"
+        }
     }
 }
 
