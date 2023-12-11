@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct LandmarkRow: View {
-    let landmark:Menu
+    let landmark:HomeMenu
 
 
     var body: some View {

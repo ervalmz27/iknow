@@ -2,7 +2,7 @@ import Foundation
 
 // MARK: - HomeResponse
 struct HomeResponse: Codable {
-    let menus: [Menu]?
+    let menus: [HomeMenu]?
     let mainLink: MainLink?
     let section1: Section1?
     let section2: Section2?
@@ -25,7 +25,7 @@ struct Contact: Codable {
     let thumbnail: String?
     let titleID, titleEn, subtitleID, subtitleEn: String?
     let subtitleID2, subtitleEn2, email, phone: String?
-    let active: Bool?
+    let active: Bool?		
 
     enum CodingKeys: String, CodingKey {
         case id, thumbnail
@@ -45,7 +45,7 @@ struct MainLink: Codable {
     let active: Bool?
     let thumbnail: String?
     let titleID, titleEn, subtitleID, subtitleEn: String?
-    let url: String?
+    let url: String?	
 
     enum CodingKeys: String, CodingKey {
         case id, active, thumbnail
@@ -58,7 +58,7 @@ struct MainLink: Codable {
 }
 
 // MARK: - Menu
-struct Menu: Codable {
+struct HomeMenu: Codable {
     let id: Int?
     let icon: String?
     let order: Int?
@@ -91,7 +91,7 @@ struct Section1: Codable {
 }
 
 // MARK: - Section1_Content
-struct Section1_Content: Codable,Identifiable {
+struct Section1_Content: Codable, Identifiable {
     let id: Int?
     let thumbnail: String?
     let titleID, titleEnd, tourismCategoryTitleID, tourismCategoryTitleEn: String?

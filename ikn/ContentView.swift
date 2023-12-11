@@ -11,7 +11,7 @@ struct ContentView: View {
     @State private var redirectToHome = false
 
     var body: some View {
-        HomeScreenView()
+        HomeUIView()
 //        VStack {
 //            if redirectToHome {
 //                NavigationLink(

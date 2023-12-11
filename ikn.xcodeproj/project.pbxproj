@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C988E8782B16D3CA00CDD650 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C988E8772B16D3CA00CDD650 /* HomeScreenView.swift */; };
+		C988E8782B16D3CA00CDD650 /* HomeScreenViewBackup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C988E8772B16D3CA00CDD650 /* HomeScreenViewBackup.swift */; };
 		C988E87A2B16D41400CDD650 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C988E8792B16D41400CDD650 /* HomeViewModel.swift */; };
 		C988E87D2B171B8B00CDD650 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C988E87C2B171B8B00CDD650 /* WebView.swift */; };
 		C991B04B2B1ED5F900B21CFE /* CarouselItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C991B04A2B1ED5F900B21CFE /* CarouselItem.swift */; };
@@ -20,10 +20,26 @@
 		C9C7B1192B0DC90600CE2C2D /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C7B1182B0DC90600CE2C2D /* SplashScreenView.swift */; };
 		C9C7B11B2B0DE11B00CE2C2D /* MenuItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C7B11A2B0DE11B00CE2C2D /* MenuItemModel.swift */; };
 		C9C7B11D2B0DE18300CE2C2D /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C7B11C2B0DE18300CE2C2D /* DashboardView.swift */; };
+		F721DB6B2B26C4A100625D7F /* TncUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F721DB6A2B26C4A100625D7F /* TncUIView.swift */; };
+		F721DB6D2B26C4B500625D7F /* TncViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F721DB6C2B26C4B500625D7F /* TncViewModel.swift */; };
+		F721DB712B26C60000625D7F /* BaseUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F721DB702B26C60000625D7F /* BaseUIView.swift */; };
+		F721DB732B26E22E00625D7F /* HomeUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F721DB722B26E22E00625D7F /* HomeUIView.swift */; };
+		F721DB752B26E35600625D7F /* HomeHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F721DB742B26E35600625D7F /* HomeHeaderUIView.swift */; };
+		F721DB772B26E6B100625D7F /* HomeMenuUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F721DB762B26E6B100625D7F /* HomeMenuUIView.swift */; };
+		F721DB792B26ECFD00625D7F /* MenuItemUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F721DB782B26ECFD00625D7F /* MenuItemUIView.swift */; };
+		F721DB7B2B26F28700625D7F /* DottedSeparatorUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F721DB7A2B26F28700625D7F /* DottedSeparatorUIView.swift */; };
+		F721DB7D2B26F34F00625D7F /* HomeMainLinkUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F721DB7C2B26F34F00625D7F /* HomeMainLinkUIView.swift */; };
+		F721DB7F2B26F67700625D7F /* SectionOneUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F721DB7E2B26F67700625D7F /* SectionOneUIView.swift */; };
+		F721DB812B26F7BC00625D7F /* AppImageUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F721DB802B26F7BC00625D7F /* AppImageUIView.swift */; };
+		F721DB832B27129300625D7F /* SectionTwoUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F721DB822B27129300625D7F /* SectionTwoUIView.swift */; };
+		F721DB852B271ED500625D7F /* HomeContactUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F721DB842B271ED500625D7F /* HomeContactUIView.swift */; };
+		F721DB872B272B7800625D7F /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F721DB862B272B7800625D7F /* WeatherModel.swift */; };
+		F721DB892B272D2C00625D7F /* HomeSocialMediaUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F721DB882B272D2C00625D7F /* HomeSocialMediaUIView.swift */; };
+		F721DB8B2B27303100625D7F /* HomeFooterUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F721DB8A2B27303100625D7F /* HomeFooterUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C988E8772B16D3CA00CDD650 /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
+		C988E8772B16D3CA00CDD650 /* HomeScreenViewBackup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewBackup.swift; sourceTree = "<group>"; };
 		C988E8792B16D41400CDD650 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		C988E87C2B171B8B00CDD650 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		C991B04A2B1ED5F900B21CFE /* CarouselItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselItem.swift; sourceTree = "<group>"; };
@@ -37,6 +53,22 @@
 		C9C7B1182B0DC90600CE2C2D /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		C9C7B11A2B0DE11B00CE2C2D /* MenuItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemModel.swift; sourceTree = "<group>"; };
 		C9C7B11C2B0DE18300CE2C2D /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		F721DB6A2B26C4A100625D7F /* TncUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TncUIView.swift; sourceTree = "<group>"; };
+		F721DB6C2B26C4B500625D7F /* TncViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TncViewModel.swift; sourceTree = "<group>"; };
+		F721DB702B26C60000625D7F /* BaseUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUIView.swift; sourceTree = "<group>"; };
+		F721DB722B26E22E00625D7F /* HomeUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUIView.swift; sourceTree = "<group>"; };
+		F721DB742B26E35600625D7F /* HomeHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderUIView.swift; sourceTree = "<group>"; };
+		F721DB762B26E6B100625D7F /* HomeMenuUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuUIView.swift; sourceTree = "<group>"; };
+		F721DB782B26ECFD00625D7F /* MenuItemUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemUIView.swift; sourceTree = "<group>"; };
+		F721DB7A2B26F28700625D7F /* DottedSeparatorUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DottedSeparatorUIView.swift; sourceTree = "<group>"; };
+		F721DB7C2B26F34F00625D7F /* HomeMainLinkUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainLinkUIView.swift; sourceTree = "<group>"; };
+		F721DB7E2B26F67700625D7F /* SectionOneUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionOneUIView.swift; sourceTree = "<group>"; };
+		F721DB802B26F7BC00625D7F /* AppImageUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppImageUIView.swift; sourceTree = "<group>"; };
+		F721DB822B27129300625D7F /* SectionTwoUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTwoUIView.swift; sourceTree = "<group>"; };
+		F721DB842B271ED500625D7F /* HomeContactUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContactUIView.swift; sourceTree = "<group>"; };
+		F721DB862B272B7800625D7F /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WeatherModel.swift; path = ikn/homescreen/WeatherModel.swift; sourceTree = SOURCE_ROOT; };
+		F721DB882B272D2C00625D7F /* HomeSocialMediaUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSocialMediaUIView.swift; sourceTree = "<group>"; };
+		F721DB8A2B27303100625D7F /* HomeFooterUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFooterUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +85,7 @@
 		C988E8762B163BF900CDD650 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				F721DB862B272B7800625D7F /* WeatherModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -78,8 +111,9 @@
 			children = (
 				C988E87B2B171B6E00CDD650 /* WebView */,
 				C9C720542B0F414A00B5AABA /* components */,
-				C988E8772B16D3CA00CDD650 /* HomeScreenView.swift */,
+				C988E8772B16D3CA00CDD650 /* HomeScreenViewBackup.swift */,
 				C988E8792B16D41400CDD650 /* HomeViewModel.swift */,
+				F721DB722B26E22E00625D7F /* HomeUIView.swift */,
 			);
 			path = homescreen;
 			sourceTree = "<group>";
@@ -87,8 +121,17 @@
 		C9C720542B0F414A00B5AABA /* components */ = {
 			isa = PBXGroup;
 			children = (
+				F721DB742B26E35600625D7F /* HomeHeaderUIView.swift */,
 				C9A224882B19CEC3007CEAA5 /* LandmarkRow.swift */,
 				C991B04A2B1ED5F900B21CFE /* CarouselItem.swift */,
+				F721DB762B26E6B100625D7F /* HomeMenuUIView.swift */,
+				F721DB782B26ECFD00625D7F /* MenuItemUIView.swift */,
+				F721DB7C2B26F34F00625D7F /* HomeMainLinkUIView.swift */,
+				F721DB7E2B26F67700625D7F /* SectionOneUIView.swift */,
+				F721DB822B27129300625D7F /* SectionTwoUIView.swift */,
+				F721DB842B271ED500625D7F /* HomeContactUIView.swift */,
+				F721DB882B272D2C00625D7F /* HomeSocialMediaUIView.swift */,
+				F721DB8A2B27303100625D7F /* HomeFooterUIView.swift */,
 			);
 			name = components;
 			sourceTree = "<group>";
@@ -136,6 +179,7 @@
 		C9C7B1222B0DFAB300CE2C2D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F721DB6E2B26C52300625D7F /* TncModel */,
 				C988E8762B163BF900CDD650 /* Home */,
 				C9C7B11A2B0DE11B00CE2C2D /* MenuItemModel.swift */,
 			);
@@ -145,9 +189,53 @@
 		C9C7B1232B0DFAD600CE2C2D /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				F721DB6F2B26C5EB00625D7F /* UIView */,
+				F721DB692B26C48A00625D7F /* Tnc */,
+				F721DB682B26C47200625D7F /* Articles */,
+				F721DB672B26C46400625D7F /* Contacts */,
 				C9C720532B0F411D00B5AABA /* homescreen */,
 			);
 			name = Screen;
+			sourceTree = "<group>";
+		};
+		F721DB672B26C46400625D7F /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		F721DB682B26C47200625D7F /* Articles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Articles;
+			sourceTree = "<group>";
+		};
+		F721DB692B26C48A00625D7F /* Tnc */ = {
+			isa = PBXGroup;
+			children = (
+				F721DB6A2B26C4A100625D7F /* TncUIView.swift */,
+				F721DB6C2B26C4B500625D7F /* TncViewModel.swift */,
+			);
+			path = Tnc;
+			sourceTree = "<group>";
+		};
+		F721DB6E2B26C52300625D7F /* TncModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TncModel;
+			sourceTree = "<group>";
+		};
+		F721DB6F2B26C5EB00625D7F /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				F721DB702B26C60000625D7F /* BaseUIView.swift */,
+				F721DB7A2B26F28700625D7F /* DottedSeparatorUIView.swift */,
+				F721DB802B26F7BC00625D7F /* AppImageUIView.swift */,
+			);
+			path = UIView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,7 +266,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					C9C7B1042B0DC88A00CE2C2D = {
 						CreatedOnToolsVersion = 14.3;
@@ -220,17 +308,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F721DB792B26ECFD00625D7F /* MenuItemUIView.swift in Sources */,
+				F721DB7F2B26F67700625D7F /* SectionOneUIView.swift in Sources */,
+				F721DB6B2B26C4A100625D7F /* TncUIView.swift in Sources */,
 				C9C7B10B2B0DC88A00CE2C2D /* ContentView.swift in Sources */,
+				F721DB732B26E22E00625D7F /* HomeUIView.swift in Sources */,
+				F721DB7D2B26F34F00625D7F /* HomeMainLinkUIView.swift in Sources */,
 				C991B04B2B1ED5F900B21CFE /* CarouselItem.swift in Sources */,
 				C9C7B1092B0DC88A00CE2C2D /* iknApp.swift in Sources */,
+				F721DB852B271ED500625D7F /* HomeContactUIView.swift in Sources */,
+				F721DB8B2B27303100625D7F /* HomeFooterUIView.swift in Sources */,
 				C9C7B11D2B0DE18300CE2C2D /* DashboardView.swift in Sources */,
 				C988E87A2B16D41400CDD650 /* HomeViewModel.swift in Sources */,
-				C988E8782B16D3CA00CDD650 /* HomeScreenView.swift in Sources */,
+				C988E8782B16D3CA00CDD650 /* HomeScreenViewBackup.swift in Sources */,
 				C9C7B1192B0DC90600CE2C2D /* SplashScreenView.swift in Sources */,
+				F721DB832B27129300625D7F /* SectionTwoUIView.swift in Sources */,
+				F721DB6D2B26C4B500625D7F /* TncViewModel.swift in Sources */,
+				F721DB712B26C60000625D7F /* BaseUIView.swift in Sources */,
 				C988E87D2B171B8B00CDD650 /* WebView.swift in Sources */,
+				F721DB752B26E35600625D7F /* HomeHeaderUIView.swift in Sources */,
+				F721DB772B26E6B100625D7F /* HomeMenuUIView.swift in Sources */,
+				F721DB872B272B7800625D7F /* WeatherModel.swift in Sources */,
 				C9C720512B0F0E0100B5AABA /* NetworkHome.swift in Sources */,
+				F721DB812B26F7BC00625D7F /* AppImageUIView.swift in Sources */,
+				F721DB7B2B26F28700625D7F /* DottedSeparatorUIView.swift in Sources */,
 				C9A224892B19CEC3007CEAA5 /* LandmarkRow.swift in Sources */,
 				C9C7B11B2B0DE11B00CE2C2D /* MenuItemModel.swift in Sources */,
+				F721DB892B272D2C00625D7F /* HomeSocialMediaUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +345,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -273,6 +378,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -301,6 +407,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -333,6 +440,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -359,8 +467,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ikn/Preview Content\"";
+				DEVELOPMENT_TEAM = GW42C65689;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "IKN Smart City";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.news";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -371,7 +482,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ikn.ikn;
+				PRODUCT_BUNDLE_IDENTIFIER = id.ikn.smartcity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -387,8 +498,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ikn/Preview Content\"";
+				DEVELOPMENT_TEAM = GW42C65689;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "IKN Smart City";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.news";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -399,7 +513,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ikn.ikn;
+				PRODUCT_BUNDLE_IDENTIFIER = id.ikn.smartcity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
