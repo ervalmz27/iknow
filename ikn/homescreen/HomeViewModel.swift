@@ -16,9 +16,7 @@ class HomeViewModel: ObservableObject {
     private var cancellables: Set<AnyCancellable> = []
     private let networkingManager = NetworkingManager()
     func fetchData() {
-       
-
-        networkingManager.fetchData(path: "home.json", method: .get) { result in
+        networkingManager.fetchData(path: "/api/pages/home", method: .get) { result in
             switch result {
             case .success(let data):
                 do {
@@ -36,6 +34,7 @@ class HomeViewModel: ObservableObject {
             }
         }
     }
+    
     
     func fetchWeather(){
         networkingManager.fetchData(path: "/api/pages/current-weather", method: .get) { result in

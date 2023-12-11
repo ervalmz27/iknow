@@ -14,7 +14,7 @@ struct HomeSocialMediaUIView: View {
             Text("Nusantara di media sosial").font(.system(size: 14)).foregroundStyle(Color("Dark 2"),Color("Dark2")).padding(.bottom,20)
             HStack(alignment: .center){
                 ForEach(socialMedia ?? [],id: \.id){item in
-                    AppImageUIView(url: item.icon ?? "").frame(width: 48, height: 48)
+                    AppImageUIView(url: item.icon ?? "").frame(width: 48, height: 48).padding(.horizontal,16)
                 }
             }
         }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeFooterUIView: View {
+    @State private var showTncView: Bool = false
     var body: some View {
         VStack{
             Button(action: {
@@ -25,16 +26,18 @@ struct HomeFooterUIView: View {
                     )
             }
             Button(action: {
-                        // Action when the text is tapped
-                        print("Text tapped!")
-                    }) {
-                        Text("Syarat dan Ketentuan Aplikasi")
-                            .bold()
-                            .foregroundColor(Color("Primary Action Color"))
-                            .underline() // Apply underline style
-                            .padding(.horizontal, 20) // Add horizontal padding
-                            .padding(.vertical, 10) // Add vertical padding
-                    }
+                showTncView = true
+            }) {
+                Text("Syarat dan Ketentuan Aplikasi")
+                    .bold()
+                    .foregroundColor(Color("Primary Action Color"))
+                    .underline()
+                    .padding(.horizontal, 20)
+                    .padding(.vertical, 10)
+            }
+            .sheet(isPresented: $showTncView) {
+                TncUIView()
+            }
         }
     }
 }

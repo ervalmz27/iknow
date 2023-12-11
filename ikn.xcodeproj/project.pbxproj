@@ -36,6 +36,7 @@
 		F721DB872B272B7800625D7F /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F721DB862B272B7800625D7F /* WeatherModel.swift */; };
 		F721DB892B272D2C00625D7F /* HomeSocialMediaUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F721DB882B272D2C00625D7F /* HomeSocialMediaUIView.swift */; };
 		F721DB8B2B27303100625D7F /* HomeFooterUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F721DB8A2B27303100625D7F /* HomeFooterUIView.swift */; };
+		F721DB8D2B273C9300625D7F /* TncModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F721DB8C2B273C9300625D7F /* TncModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		F721DB862B272B7800625D7F /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WeatherModel.swift; path = ikn/homescreen/WeatherModel.swift; sourceTree = SOURCE_ROOT; };
 		F721DB882B272D2C00625D7F /* HomeSocialMediaUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSocialMediaUIView.swift; sourceTree = "<group>"; };
 		F721DB8A2B27303100625D7F /* HomeFooterUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFooterUIView.swift; sourceTree = "<group>"; };
+		F721DB8C2B273C9300625D7F /* TncModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TncModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +226,7 @@
 		F721DB6E2B26C52300625D7F /* TncModel */ = {
 			isa = PBXGroup;
 			children = (
+				F721DB8C2B273C9300625D7F /* TncModel.swift */,
 			);
 			path = TncModel;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				F721DB712B26C60000625D7F /* BaseUIView.swift in Sources */,
 				C988E87D2B171B8B00CDD650 /* WebView.swift in Sources */,
 				F721DB752B26E35600625D7F /* HomeHeaderUIView.swift in Sources */,
+				F721DB8D2B273C9300625D7F /* TncModel.swift in Sources */,
 				F721DB772B26E6B100625D7F /* HomeMenuUIView.swift in Sources */,
 				F721DB872B272B7800625D7F /* WeatherModel.swift in Sources */,
 				C9C720512B0F0E0100B5AABA /* NetworkHome.swift in Sources */,

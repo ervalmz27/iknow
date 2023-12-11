@@ -8,8 +8,17 @@
 import SwiftUI
 
 struct TncUIView: View {
+    @ObservedObject var viewModel = TncViewModel()
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        BaseUIView(
+            content: Text(viewModel.tnc?.contentID ?? "").font(.system(size: 14)).foregroundStyle(Color("Dark 1")),
+            title: "Syarat dan Ketentuan",
+            isClose: true
+        )
+        .onAppear {
+            viewModel.fetchTnc()
+        }
     }
 }
 

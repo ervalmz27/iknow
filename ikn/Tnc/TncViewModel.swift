@@ -7,19 +7,26 @@
 
 import Foundation
 
-// MARK: - TNCModel
-struct TNCModel: Codable {
-    let id: Int
-    let titleID, titleEn, contentID, contentEn: String
-    let createdAt, updatedAt: String
-
-    enum CodingKeys: String, CodingKey {
-        case id
-        case titleID = "title_id"
-        case titleEn = "title_en"
-        case contentID = "content_id"
-        case contentEn = "content_en"
-        case createdAt = "created_at"
-        case updatedAt = "updated_at"
+class TncViewModel : ObservableObject {
+    private let networkManager = NetworkingManager()
+    @Published var tnc:TNCModel? = nil
+    
+    func fetchTnc(){
+        networkManager.fetchData(path: "/api/pages/tncs", method: .get){
+            result in
+            switch result {
+            case .success(let data):
+                do {
+                    let decodedData = try JSONDecoder().decode(TNCModel.self, from: data)
+                    DispatchQueue.main.async {
+                        self.tnc = decodedData
+                    }
+                } catch {
+                    print("Error decoding JSON: \(error)")
+                }
+            case .failure(let error):
+                print("Error fetching data: \(error)")
+            }
+        }
     }
 }

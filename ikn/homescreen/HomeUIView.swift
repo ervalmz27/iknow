@@ -32,7 +32,7 @@ struct HomeUIView: View {
                         HomeContactUIView(contact: (viewModel.homeData?.contact)!).padding(.bottom,16)
                         DottedSeparator(color: Color(hex: 0xDDDDDD), lineWidth: 1, dash: [4, 4])
                                         .padding(.bottom, 16)
-                        HomeSocialMediaUIView(socialMedia: viewModel.homeData?.socialMedias)
+                        HomeSocialMediaUIView(socialMedia: viewModel.homeData?.socialMedias).padding(.bottom,16)
                         HomeFooterUIView()
                     }
                 }.onAppear{
