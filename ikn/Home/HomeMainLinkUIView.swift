@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeMainLinkUIView: View {
     let mainLink:MainLink?
-    init(mainLink: MainLink) {
+    init(mainLink: MainLink?) {
         self.mainLink = mainLink
     }
     

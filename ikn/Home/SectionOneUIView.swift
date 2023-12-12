@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct SectionOneUIView: View {
-    let sectionOne : Section1
+    let sectionOne : Section1?
+    init(sectionOne: Section1?) {
+        self.sectionOne = sectionOne
+    }
     
     var body: some View {
-        let sectionData = sectionOne.contents
+        let sectionData = sectionOne?.contents
         VStack(alignment: .leading){
-            Text("\(sectionOne.titleID ?? "")").bold().font(.system(size: 18))
+            Text("\(sectionOne?.titleID ?? "")").bold().font(.system(size: 18))
             LazyVGrid(columns: Array(repeating: GridItem(), count: 2), spacing: 12) {
                 ForEach(sectionData ?? [], id: \.id) { item in
                     SectionOneItemView(sectionData: item)

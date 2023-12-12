@@ -17,7 +17,7 @@ struct SplashScreenView: View {
         if isActive {
             ContentView()
         } else {
-            Image(uiImage: UIImage(named: "splashscreen")!).resizable()
+            Image(uiImage: UIImage(named: "splashscreen")!).resizable().ignoresSafeArea()
             .aspectRatio(contentMode: .fill)
             .onAppear {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {

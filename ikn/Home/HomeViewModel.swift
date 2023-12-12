@@ -10,7 +10,7 @@ import Combine
 
 class HomeViewModel: ObservableObject {
     @Published var homeData: HomeResponse? = nil
-    @Published var menuHome: [HomeMenu]? = nil
+    @Published var menuHome: [HomeMenu]? = []
     @Published var weather: WeatherModel? = nil
     
     private var cancellables: Set<AnyCancellable> = []
@@ -24,7 +24,6 @@ class HomeViewModel: ObservableObject {
                     DispatchQueue.main.async {
                         self.homeData = decodedData
                         self.getHomeMenuFromHomeData()
-                        print(decodedData)
                     }
                 } catch {
                     print("Error decoding JSON: \(error)")
@@ -55,14 +54,11 @@ class HomeViewModel: ObservableObject {
     }
     
     func getHomeMenuFromHomeData(){
-        guard let menus = homeData?.menus else {
-                print("Home data or menus are nil.")
-                return
+        self.menuHome?.removeAll()
+        self.homeData?.menus?.forEach { item in
+            if(item.displayOnHome==true){
+                self.menuHome?.append(item)
             }
-            // Filter menus based on the is_show_dashboard property
-            menuHome = menus.filter { $0.displayOnHome==true }
-        
-        print("jumlah data adalah \(menus.count)")
-
+        }
     }
 }

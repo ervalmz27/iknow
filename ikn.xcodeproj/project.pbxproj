@@ -20,6 +20,11 @@
 		C9C7B1192B0DC90600CE2C2D /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C7B1182B0DC90600CE2C2D /* SplashScreenView.swift */; };
 		C9C7B11B2B0DE11B00CE2C2D /* MenuItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C7B11A2B0DE11B00CE2C2D /* MenuItemModel.swift */; };
 		C9C7B11D2B0DE18300CE2C2D /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C7B11C2B0DE18300CE2C2D /* DashboardView.swift */; };
+		F71E00792B27E8B300CB54B3 /* ContactShortcutUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71E00782B27E8B300CB54B3 /* ContactShortcutUIView.swift */; };
+		F71E007B2B27E90E00CB54B3 /* ContactsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71E007A2B27E90E00CB54B3 /* ContactsResponse.swift */; };
+		F71E007E2B27E99200CB54B3 /* ContactCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71E007D2B27E99200CB54B3 /* ContactCategory.swift */; };
+		F71E00802B27EF3E00CB54B3 /* ContactsCategoryUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71E007F2B27EF3E00CB54B3 /* ContactsCategoryUIView.swift */; };
+		F71E00822B27F3A400CB54B3 /* ContactsListUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71E00812B27F3A400CB54B3 /* ContactsListUIView.swift */; };
 		F721DB6B2B26C4A100625D7F /* TncUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F721DB6A2B26C4A100625D7F /* TncUIView.swift */; };
 		F721DB6D2B26C4B500625D7F /* TncViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F721DB6C2B26C4B500625D7F /* TncViewModel.swift */; };
 		F721DB712B26C60000625D7F /* BaseUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F721DB702B26C60000625D7F /* BaseUIView.swift */; };
@@ -33,10 +38,16 @@
 		F721DB812B26F7BC00625D7F /* AppImageUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F721DB802B26F7BC00625D7F /* AppImageUIView.swift */; };
 		F721DB832B27129300625D7F /* SectionTwoUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F721DB822B27129300625D7F /* SectionTwoUIView.swift */; };
 		F721DB852B271ED500625D7F /* HomeContactUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F721DB842B271ED500625D7F /* HomeContactUIView.swift */; };
-		F721DB872B272B7800625D7F /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F721DB862B272B7800625D7F /* WeatherModel.swift */; };
 		F721DB892B272D2C00625D7F /* HomeSocialMediaUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F721DB882B272D2C00625D7F /* HomeSocialMediaUIView.swift */; };
 		F721DB8B2B27303100625D7F /* HomeFooterUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F721DB8A2B27303100625D7F /* HomeFooterUIView.swift */; };
 		F721DB8D2B273C9300625D7F /* TncModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F721DB8C2B273C9300625D7F /* TncModel.swift */; };
+		F721DB8F2B2752BA00625D7F /* ArticlesUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F721DB8E2B2752BA00625D7F /* ArticlesUIView.swift */; };
+		F721DB912B2752C800625D7F /* ArticlesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F721DB902B2752C800625D7F /* ArticlesViewModel.swift */; };
+		F721DB932B27532100625D7F /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F721DB922B27532100625D7F /* WeatherModel.swift */; };
+		F7489F962B27E6480089B832 /* ContactsHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7489F952B27E6480089B832 /* ContactsHeaderUIView.swift */; };
+		F79B744B2B2770E600A30667 /* AllMenuUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79B744A2B2770E600A30667 /* AllMenuUIView.swift */; };
+		F79B744D2B27E33100A30667 /* ContactsUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79B744C2B27E33100A30667 /* ContactsUIView.swift */; };
+		F79B744F2B27E34900A30667 /* ContactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79B744E2B27E34900A30667 /* ContactsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +65,11 @@
 		C9C7B1182B0DC90600CE2C2D /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		C9C7B11A2B0DE11B00CE2C2D /* MenuItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemModel.swift; sourceTree = "<group>"; };
 		C9C7B11C2B0DE18300CE2C2D /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		F71E00782B27E8B300CB54B3 /* ContactShortcutUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactShortcutUIView.swift; sourceTree = "<group>"; };
+		F71E007A2B27E90E00CB54B3 /* ContactsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsResponse.swift; sourceTree = "<group>"; };
+		F71E007D2B27E99200CB54B3 /* ContactCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCategory.swift; sourceTree = "<group>"; };
+		F71E007F2B27EF3E00CB54B3 /* ContactsCategoryUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsCategoryUIView.swift; sourceTree = "<group>"; };
+		F71E00812B27F3A400CB54B3 /* ContactsListUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsListUIView.swift; sourceTree = "<group>"; };
 		F721DB6A2B26C4A100625D7F /* TncUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TncUIView.swift; sourceTree = "<group>"; };
 		F721DB6C2B26C4B500625D7F /* TncViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TncViewModel.swift; sourceTree = "<group>"; };
 		F721DB702B26C60000625D7F /* BaseUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUIView.swift; sourceTree = "<group>"; };
@@ -67,10 +83,16 @@
 		F721DB802B26F7BC00625D7F /* AppImageUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppImageUIView.swift; sourceTree = "<group>"; };
 		F721DB822B27129300625D7F /* SectionTwoUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTwoUIView.swift; sourceTree = "<group>"; };
 		F721DB842B271ED500625D7F /* HomeContactUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContactUIView.swift; sourceTree = "<group>"; };
-		F721DB862B272B7800625D7F /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WeatherModel.swift; path = ikn/homescreen/WeatherModel.swift; sourceTree = SOURCE_ROOT; };
 		F721DB882B272D2C00625D7F /* HomeSocialMediaUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSocialMediaUIView.swift; sourceTree = "<group>"; };
 		F721DB8A2B27303100625D7F /* HomeFooterUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFooterUIView.swift; sourceTree = "<group>"; };
 		F721DB8C2B273C9300625D7F /* TncModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TncModel.swift; sourceTree = "<group>"; };
+		F721DB8E2B2752BA00625D7F /* ArticlesUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesUIView.swift; sourceTree = "<group>"; };
+		F721DB902B2752C800625D7F /* ArticlesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewModel.swift; sourceTree = "<group>"; };
+		F721DB922B27532100625D7F /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		F7489F952B27E6480089B832 /* ContactsHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsHeaderUIView.swift; sourceTree = "<group>"; };
+		F79B744A2B2770E600A30667 /* AllMenuUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMenuUIView.swift; sourceTree = "<group>"; };
+		F79B744C2B27E33100A30667 /* ContactsUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsUIView.swift; sourceTree = "<group>"; };
+		F79B744E2B27E34900A30667 /* ContactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +109,7 @@
 		C988E8762B163BF900CDD650 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				F721DB862B272B7800625D7F /* WeatherModel.swift */,
+				F721DB922B27532100625D7F /* WeatherModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -108,7 +130,7 @@
 			name = Network;
 			sourceTree = "<group>";
 		};
-		C9C720532B0F411D00B5AABA /* homescreen */ = {
+		C9C720532B0F411D00B5AABA /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				C988E87B2B171B6E00CDD650 /* WebView */,
@@ -117,7 +139,7 @@
 				C988E8792B16D41400CDD650 /* HomeViewModel.swift */,
 				F721DB722B26E22E00625D7F /* HomeUIView.swift */,
 			);
-			path = homescreen;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		C9C720542B0F414A00B5AABA /* components */ = {
@@ -134,6 +156,7 @@
 				F721DB842B271ED500625D7F /* HomeContactUIView.swift */,
 				F721DB882B272D2C00625D7F /* HomeSocialMediaUIView.swift */,
 				F721DB8A2B27303100625D7F /* HomeFooterUIView.swift */,
+				F79B744A2B2770E600A30667 /* AllMenuUIView.swift */,
 			);
 			name = components;
 			sourceTree = "<group>";
@@ -181,6 +204,7 @@
 		C9C7B1222B0DFAB300CE2C2D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F71E007C2B27E97D00CB54B3 /* Contact */,
 				F721DB6E2B26C52300625D7F /* TncModel */,
 				C988E8762B163BF900CDD650 /* Home */,
 				C9C7B11A2B0DE11B00CE2C2D /* MenuItemModel.swift */,
@@ -195,14 +219,26 @@
 				F721DB692B26C48A00625D7F /* Tnc */,
 				F721DB682B26C47200625D7F /* Articles */,
 				F721DB672B26C46400625D7F /* Contacts */,
-				C9C720532B0F411D00B5AABA /* homescreen */,
+				C9C720532B0F411D00B5AABA /* Home */,
 			);
 			name = Screen;
+			sourceTree = "<group>";
+		};
+		F71E007C2B27E97D00CB54B3 /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				F71E007A2B27E90E00CB54B3 /* ContactsResponse.swift */,
+				F71E007D2B27E99200CB54B3 /* ContactCategory.swift */,
+			);
+			path = Contact;
 			sourceTree = "<group>";
 		};
 		F721DB672B26C46400625D7F /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
+				F79B74502B27E34F00A30667 /* Components */,
+				F79B744C2B27E33100A30667 /* ContactsUIView.swift */,
+				F79B744E2B27E34900A30667 /* ContactsViewModel.swift */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
@@ -210,6 +246,8 @@
 		F721DB682B26C47200625D7F /* Articles */ = {
 			isa = PBXGroup;
 			children = (
+				F721DB8E2B2752BA00625D7F /* ArticlesUIView.swift */,
+				F721DB902B2752C800625D7F /* ArticlesViewModel.swift */,
 			);
 			path = Articles;
 			sourceTree = "<group>";
@@ -239,6 +277,17 @@
 				F721DB802B26F7BC00625D7F /* AppImageUIView.swift */,
 			);
 			path = UIView;
+			sourceTree = "<group>";
+		};
+		F79B74502B27E34F00A30667 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F7489F952B27E6480089B832 /* ContactsHeaderUIView.swift */,
+				F71E00782B27E8B300CB54B3 /* ContactShortcutUIView.swift */,
+				F71E007F2B27EF3E00CB54B3 /* ContactsCategoryUIView.swift */,
+				F71E00812B27F3A400CB54B3 /* ContactsListUIView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,34 +360,45 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F71E00822B27F3A400CB54B3 /* ContactsListUIView.swift in Sources */,
 				F721DB792B26ECFD00625D7F /* MenuItemUIView.swift in Sources */,
 				F721DB7F2B26F67700625D7F /* SectionOneUIView.swift in Sources */,
 				F721DB6B2B26C4A100625D7F /* TncUIView.swift in Sources */,
 				C9C7B10B2B0DC88A00CE2C2D /* ContentView.swift in Sources */,
+				F721DB932B27532100625D7F /* WeatherModel.swift in Sources */,
 				F721DB732B26E22E00625D7F /* HomeUIView.swift in Sources */,
 				F721DB7D2B26F34F00625D7F /* HomeMainLinkUIView.swift in Sources */,
+				F79B744D2B27E33100A30667 /* ContactsUIView.swift in Sources */,
+				F71E007E2B27E99200CB54B3 /* ContactCategory.swift in Sources */,
 				C991B04B2B1ED5F900B21CFE /* CarouselItem.swift in Sources */,
 				C9C7B1092B0DC88A00CE2C2D /* iknApp.swift in Sources */,
 				F721DB852B271ED500625D7F /* HomeContactUIView.swift in Sources */,
 				F721DB8B2B27303100625D7F /* HomeFooterUIView.swift in Sources */,
+				F7489F962B27E6480089B832 /* ContactsHeaderUIView.swift in Sources */,
 				C9C7B11D2B0DE18300CE2C2D /* DashboardView.swift in Sources */,
+				F721DB912B2752C800625D7F /* ArticlesViewModel.swift in Sources */,
 				C988E87A2B16D41400CDD650 /* HomeViewModel.swift in Sources */,
 				C988E8782B16D3CA00CDD650 /* HomeScreenViewBackup.swift in Sources */,
 				C9C7B1192B0DC90600CE2C2D /* SplashScreenView.swift in Sources */,
 				F721DB832B27129300625D7F /* SectionTwoUIView.swift in Sources */,
 				F721DB6D2B26C4B500625D7F /* TncViewModel.swift in Sources */,
+				F79B744F2B27E34900A30667 /* ContactsViewModel.swift in Sources */,
 				F721DB712B26C60000625D7F /* BaseUIView.swift in Sources */,
 				C988E87D2B171B8B00CDD650 /* WebView.swift in Sources */,
 				F721DB752B26E35600625D7F /* HomeHeaderUIView.swift in Sources */,
+				F71E00802B27EF3E00CB54B3 /* ContactsCategoryUIView.swift in Sources */,
+				F71E00792B27E8B300CB54B3 /* ContactShortcutUIView.swift in Sources */,
 				F721DB8D2B273C9300625D7F /* TncModel.swift in Sources */,
 				F721DB772B26E6B100625D7F /* HomeMenuUIView.swift in Sources */,
-				F721DB872B272B7800625D7F /* WeatherModel.swift in Sources */,
+				F71E007B2B27E90E00CB54B3 /* ContactsResponse.swift in Sources */,
 				C9C720512B0F0E0100B5AABA /* NetworkHome.swift in Sources */,
 				F721DB812B26F7BC00625D7F /* AppImageUIView.swift in Sources */,
 				F721DB7B2B26F28700625D7F /* DottedSeparatorUIView.swift in Sources */,
 				C9A224892B19CEC3007CEAA5 /* LandmarkRow.swift in Sources */,
+				F79B744B2B2770E600A30667 /* AllMenuUIView.swift in Sources */,
 				C9C7B11B2B0DE11B00CE2C2D /* MenuItemModel.swift in Sources */,
 				F721DB892B272D2C00625D7F /* HomeSocialMediaUIView.swift in Sources */,
+				F721DB8F2B2752BA00625D7F /* ArticlesUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

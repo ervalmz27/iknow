@@ -12,7 +12,11 @@ struct TncUIView: View {
 
     var body: some View {
         BaseUIView(
-            content: Text(viewModel.tnc?.contentID ?? "").font(.system(size: 14)).foregroundStyle(Color("Dark 1")),
+            content: ScrollView{
+                VStack{
+                    Text(viewModel.tnc?.contentID ?? "").font(.system(size: 14)).foregroundStyle(Color("Dark 1"))
+                }
+            },
             title: "Syarat dan Ketentuan",
             isClose: true
         )

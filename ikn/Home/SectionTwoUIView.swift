@@ -9,18 +9,18 @@ import SwiftUI
 
 struct SectionTwoUIView: View {
     
-    let sectionTwo:Section2
+    let sectionTwo:Section2?
     
-    init(sectionTwo: Section2) {
+    init(sectionTwo: Section2?) {
         self.sectionTwo = sectionTwo
     }
     
     var body: some View {
         VStack(alignment: .leading){
-            Text("\(sectionTwo.titleID ?? "")").bold().font(.system(size: 18)).padding(.bottom,12)
+            Text("\(sectionTwo?.titleID ?? "")").bold().font(.system(size: 18)).padding(.bottom,12)
             ScrollView(.horizontal){
                 HStack{
-                    ForEach(sectionTwo.contents ?? [], id: \.id) { item in
+                    ForEach(sectionTwo?.contents ?? [], id: \.id) { item in
                         SectionTwoItemView(sectionData: item).frame(width: 200).padding(.trailing,14)
                     }
                     
@@ -31,12 +31,20 @@ struct SectionTwoUIView: View {
     }
 }
 
+	
+struct LoadMoreView: View {
+    @State private var isShowingArticlesView = false
 
-struct LoadMoreView : View {
     var body: some View {
-        VStack(alignment: .leading){
-            Image(systemName: "arrow.right")
-            Text("Lihat SemuaArtikel").font(.system(size: 11))
+        Button(action: {
+            isShowingArticlesView = true
+        }) {
+            VStack(alignment: .leading) {
+                Image(systemName: "arrow.right")
+                Text("Lihat Semua Artikel").font(.system(size: 11))
+            }
+        }.sheet(isPresented: $isShowingArticlesView){
+            ArticlesUIView()
         }
     }
 }

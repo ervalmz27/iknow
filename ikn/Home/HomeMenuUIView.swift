@@ -8,17 +8,16 @@
 import SwiftUI
 
 struct HomeMenuUIView: View {
-    let homeViewModel: HomeViewModel
-
-    init(homeViewModel: HomeViewModel) {
-        self.homeViewModel = homeViewModel
+    let allMenu: [HomeMenu]?
+    let filteredMenu : [HomeMenu]?
+    init(allMenu: [HomeMenu]?, filteredMenu: [HomeMenu]?) {
+        self.allMenu = allMenu
+        self.filteredMenu = filteredMenu
     }
-
     var body: some View {
-        let homeData = homeViewModel.menuHome
         LazyVGrid(columns: Array(repeating: GridItem(), count: 4), spacing: 8) {
-            ForEach(homeData ?? [], id: \.order) { item in
-                MenuItemUIView(menu: item)
+            ForEach(filteredMenu ?? [], id: \.order) { item in
+                MenuItemUIView(menu: item,allMenu: allMenu)
                     .padding(.bottom, 24) // Add spacing between lines
             }
         }
