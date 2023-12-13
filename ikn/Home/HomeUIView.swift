@@ -29,7 +29,8 @@ struct HomeUIView: View {
                         SectionTwoUIView(sectionTwo: viewModel.homeData?.section2)
                         DottedSeparator(color: Color(hex: 0xDDDDDD), lineWidth: 1, dash: [4, 4])
                             .padding(.bottom, 16).padding(.top,16)
-                        HomeContactUIView(contact: viewModel.homeData?.contact).padding(.bottom,16)
+                        HomeContactUIView(contact: viewModel.homeData?.contact)
+                            .padding()
                         DottedSeparator(color: Color(hex: 0xDDDDDD), lineWidth: 1, dash: [4, 4])
                                         .padding(.bottom, 16)
                         HomeSocialMediaUIView(socialMedia: viewModel.homeData?.socialMedias).padding(.bottom,16)
@@ -40,10 +41,8 @@ struct HomeUIView: View {
                 }
             }
         }.onAppear{
-            
             viewModel.fetchData()
             viewModel.fetchWeather()
-            
         }.padding(.horizontal,16)
     }
 }
@@ -58,3 +57,6 @@ struct LoadingView:View {
     }
 }
 
+#Preview {
+    HomeUIView()
+}

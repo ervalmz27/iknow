@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct HomeContactUIView: View {
-    let contact:Contact?
-    init(contact: Contact?) {
-        self.contact = contact
+    let healt:Health?
+    init(healt: Health?) {
+        self.healt = healt
     }
     var body: some View {
         VStack(alignment: .leading){
-            Text("\(contact?.titleID ?? "")").bold().font(.system(size: 18)).padding(.bottom,16)
-            AppImageUIView(url: contact?.thumbnail ?? "").padding(.bottom,12)
+            Text("\(healt?.titleID ?? "")").bold().font(.system(size: 18)).padding(.bottom,16)
+//            AppImageUIView(url: healt?.thumbnail ?? "").padding(.bottom,12)
         }
     }
 }

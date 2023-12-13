@@ -20,6 +20,13 @@
 		C9C7B1192B0DC90600CE2C2D /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C7B1182B0DC90600CE2C2D /* SplashScreenView.swift */; };
 		C9C7B11B2B0DE11B00CE2C2D /* MenuItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C7B11A2B0DE11B00CE2C2D /* MenuItemModel.swift */; };
 		C9C7B11D2B0DE18300CE2C2D /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C7B11C2B0DE18300CE2C2D /* DashboardView.swift */; };
+		C9E88DC02B299072000B2865 /* HealthUiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E88DBF2B299072000B2865 /* HealthUiView.swift */; };
+		C9E88DC22B2994A4000B2865 /* HealthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E88DC12B2994A4000B2865 /* HealthViewModel.swift */; };
+		C9E88DC42B299EEC000B2865 /* HealthsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E88DC32B299EEC000B2865 /* HealthsResponse.swift */; };
+		C9E88DC62B299F1A000B2865 /* HealthCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E88DC52B299F1A000B2865 /* HealthCategory.swift */; };
+		C9E88DCA2B29AC90000B2865 /* HealthHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E88DC92B29AC90000B2865 /* HealthHeaderUIView.swift */; };
+		C9E88DCC2B29ACEC000B2865 /* HeathCategoryUiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E88DCB2B29ACEC000B2865 /* HeathCategoryUiView.swift */; };
+		C9E88DCE2B29ADC5000B2865 /* HealtListUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E88DCD2B29ADC5000B2865 /* HealtListUIView.swift */; };
 		F71E00792B27E8B300CB54B3 /* ContactShortcutUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71E00782B27E8B300CB54B3 /* ContactShortcutUIView.swift */; };
 		F71E007B2B27E90E00CB54B3 /* ContactsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71E007A2B27E90E00CB54B3 /* ContactsResponse.swift */; };
 		F71E007E2B27E99200CB54B3 /* ContactCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71E007D2B27E99200CB54B3 /* ContactCategory.swift */; };
@@ -65,6 +72,13 @@
 		C9C7B1182B0DC90600CE2C2D /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		C9C7B11A2B0DE11B00CE2C2D /* MenuItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemModel.swift; sourceTree = "<group>"; };
 		C9C7B11C2B0DE18300CE2C2D /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		C9E88DBF2B299072000B2865 /* HealthUiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthUiView.swift; sourceTree = "<group>"; };
+		C9E88DC12B2994A4000B2865 /* HealthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthViewModel.swift; sourceTree = "<group>"; };
+		C9E88DC32B299EEC000B2865 /* HealthsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthsResponse.swift; sourceTree = "<group>"; };
+		C9E88DC52B299F1A000B2865 /* HealthCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCategory.swift; sourceTree = "<group>"; };
+		C9E88DC92B29AC90000B2865 /* HealthHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthHeaderUIView.swift; sourceTree = "<group>"; };
+		C9E88DCB2B29ACEC000B2865 /* HeathCategoryUiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeathCategoryUiView.swift; sourceTree = "<group>"; };
+		C9E88DCD2B29ADC5000B2865 /* HealtListUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealtListUIView.swift; sourceTree = "<group>"; };
 		F71E00782B27E8B300CB54B3 /* ContactShortcutUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactShortcutUIView.swift; sourceTree = "<group>"; };
 		F71E007A2B27E90E00CB54B3 /* ContactsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsResponse.swift; sourceTree = "<group>"; };
 		F71E007D2B27E99200CB54B3 /* ContactCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCategory.swift; sourceTree = "<group>"; };
@@ -180,6 +194,7 @@
 		C9C7B1072B0DC88A00CE2C2D /* ikn */ = {
 			isa = PBXGroup;
 			children = (
+				C9E88DBC2B296BB7000B2865 /* Browser */,
 				C9C7204F2B0F0DD600B5AABA /* Network */,
 				C9C7B1232B0DFAD600CE2C2D /* Screen */,
 				C9C7B1222B0DFAB300CE2C2D /* Models */,
@@ -204,6 +219,7 @@
 		C9C7B1222B0DFAB300CE2C2D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C9E88DBE2B299038000B2865 /* Health */,
 				F71E007C2B27E97D00CB54B3 /* Contact */,
 				F721DB6E2B26C52300625D7F /* TncModel */,
 				C988E8762B163BF900CDD650 /* Home */,
@@ -215,6 +231,8 @@
 		C9C7B1232B0DFAD600CE2C2D /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				C9E88DC72B29ABC8000B2865 /* Components */,
+				C9E88DCF2B29BB36000B2865 /* Healths */,
 				F721DB6F2B26C5EB00625D7F /* UIView */,
 				F721DB692B26C48A00625D7F /* Tnc */,
 				F721DB682B26C47200625D7F /* Articles */,
@@ -222,6 +240,41 @@
 				C9C720532B0F411D00B5AABA /* Home */,
 			);
 			name = Screen;
+			sourceTree = "<group>";
+		};
+		C9E88DBC2B296BB7000B2865 /* Browser */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Browser;
+			sourceTree = "<group>";
+		};
+		C9E88DBE2B299038000B2865 /* Health */ = {
+			isa = PBXGroup;
+			children = (
+				C9E88DC32B299EEC000B2865 /* HealthsResponse.swift */,
+				C9E88DC52B299F1A000B2865 /* HealthCategory.swift */,
+			);
+			name = Health;
+			sourceTree = "<group>";
+		};
+		C9E88DC72B29ABC8000B2865 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C9E88DC92B29AC90000B2865 /* HealthHeaderUIView.swift */,
+				C9E88DCB2B29ACEC000B2865 /* HeathCategoryUiView.swift */,
+				C9E88DCD2B29ADC5000B2865 /* HealtListUIView.swift */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
+		C9E88DCF2B29BB36000B2865 /* Healths */ = {
+			isa = PBXGroup;
+			children = (
+				C9E88DC12B2994A4000B2865 /* HealthViewModel.swift */,
+				C9E88DBF2B299072000B2865 /* HealthUiView.swift */,
+			);
+			name = Healths;
 			sourceTree = "<group>";
 		};
 		F71E007C2B27E97D00CB54B3 /* Contact */ = {
@@ -364,27 +417,34 @@
 				F721DB792B26ECFD00625D7F /* MenuItemUIView.swift in Sources */,
 				F721DB7F2B26F67700625D7F /* SectionOneUIView.swift in Sources */,
 				F721DB6B2B26C4A100625D7F /* TncUIView.swift in Sources */,
+				C9E88DC02B299072000B2865 /* HealthUiView.swift in Sources */,
+				C9E88DCE2B29ADC5000B2865 /* HealtListUIView.swift in Sources */,
 				C9C7B10B2B0DC88A00CE2C2D /* ContentView.swift in Sources */,
 				F721DB932B27532100625D7F /* WeatherModel.swift in Sources */,
 				F721DB732B26E22E00625D7F /* HomeUIView.swift in Sources */,
+				C9E88DC42B299EEC000B2865 /* HealthsResponse.swift in Sources */,
 				F721DB7D2B26F34F00625D7F /* HomeMainLinkUIView.swift in Sources */,
 				F79B744D2B27E33100A30667 /* ContactsUIView.swift in Sources */,
 				F71E007E2B27E99200CB54B3 /* ContactCategory.swift in Sources */,
 				C991B04B2B1ED5F900B21CFE /* CarouselItem.swift in Sources */,
+				C9E88DC62B299F1A000B2865 /* HealthCategory.swift in Sources */,
 				C9C7B1092B0DC88A00CE2C2D /* iknApp.swift in Sources */,
 				F721DB852B271ED500625D7F /* HomeContactUIView.swift in Sources */,
 				F721DB8B2B27303100625D7F /* HomeFooterUIView.swift in Sources */,
 				F7489F962B27E6480089B832 /* ContactsHeaderUIView.swift in Sources */,
 				C9C7B11D2B0DE18300CE2C2D /* DashboardView.swift in Sources */,
+				C9E88DCA2B29AC90000B2865 /* HealthHeaderUIView.swift in Sources */,
 				F721DB912B2752C800625D7F /* ArticlesViewModel.swift in Sources */,
 				C988E87A2B16D41400CDD650 /* HomeViewModel.swift in Sources */,
 				C988E8782B16D3CA00CDD650 /* HomeScreenViewBackup.swift in Sources */,
 				C9C7B1192B0DC90600CE2C2D /* SplashScreenView.swift in Sources */,
+				C9E88DC22B2994A4000B2865 /* HealthViewModel.swift in Sources */,
 				F721DB832B27129300625D7F /* SectionTwoUIView.swift in Sources */,
 				F721DB6D2B26C4B500625D7F /* TncViewModel.swift in Sources */,
 				F79B744F2B27E34900A30667 /* ContactsViewModel.swift in Sources */,
 				F721DB712B26C60000625D7F /* BaseUIView.swift in Sources */,
 				C988E87D2B171B8B00CDD650 /* WebView.swift in Sources */,
+				C9E88DCC2B29ACEC000B2865 /* HeathCategoryUiView.swift in Sources */,
 				F721DB752B26E35600625D7F /* HomeHeaderUIView.swift in Sources */,
 				F71E00802B27EF3E00CB54B3 /* ContactsCategoryUIView.swift in Sources */,
 				F71E00792B27E8B300CB54B3 /* ContactShortcutUIView.swift in Sources */,

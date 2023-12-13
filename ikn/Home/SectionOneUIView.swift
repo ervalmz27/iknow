@@ -48,6 +48,7 @@ struct SectionOneItemView:View{
     }
     var body: some View{
         VStack(alignment: .leading){
+            
             AppImageUIView(url: sectionData.thumbnail ?? "")
             Text(sectionData.tourismCategoryTitleID ?? "").bold().font(.system(size: 12)).foregroundStyle(Color("Dark 2"), Color("Dark 2")).padding(.top,12)
             Text(sectionData.titleID ?? "").bold().font(.system(size: 12)).foregroundStyle(Color("Dark 1"), Color("Dark 1")).padding(.top,4).multilineTextAlignment(.leading)

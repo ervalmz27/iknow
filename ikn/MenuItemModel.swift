@@ -39,6 +39,8 @@ struct Contact: Codable {
     }
 }
 
+
+
 // MARK: - MainLink
 struct MainLink: Codable {
     let id: Int?
