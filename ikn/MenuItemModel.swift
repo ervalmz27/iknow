@@ -47,7 +47,7 @@ struct MainLink: Codable {
     let active: Bool?
     let thumbnail: String?
     let titleID, titleEn, subtitleID, subtitleEn: String?
-    let url: String?	
+    let link: String?	
 
     enum CodingKeys: String, CodingKey {
         case id, active, thumbnail
@@ -55,7 +55,7 @@ struct MainLink: Codable {
         case titleEn = "title_en"
         case subtitleID = "subtitle_id"
         case subtitleEn = "subtitle_en"
-        case url
+        case link = "link"
     }
 }
 
@@ -66,8 +66,8 @@ struct HomeMenu: Codable {
     let order: Int?
     let displayOnHome: Bool?
     let titleID, titleEn: String?
-    let url: String?
-    let path: String?
+    let url: String? = nil
+    let path: String? = nil
     let isUnderDevelopment: Bool?
 
     enum CodingKeys: String, CodingKey {
@@ -75,7 +75,8 @@ struct HomeMenu: Codable {
         case displayOnHome = "display_on_home"
         case titleID = "title_id"
         case titleEn = "title_en"
-        case url, path
+        case url = "url"
+        case path = "path"
         case isUnderDevelopment = "is_under_development"
     }
 }

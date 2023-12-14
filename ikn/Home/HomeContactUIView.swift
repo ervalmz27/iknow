@@ -13,9 +13,28 @@ struct HomeContactUIView: View {
         self.contact = contact
     }
     var body: some View {
-        VStack(alignment: .leading){
-            Text("\(contact?.titleID ?? "")").bold().font(.system(size: 18)).padding(.bottom,16)
-            AppImageUIView(url: contact?.thumbnail ?? "").padding(.bottom,12)
-        }
+        Button(action: {
+            openMailApp()
+        }, label: {
+            VStack(alignment: .leading){
+                Text("\(contact?.titleID ?? "")").bold().font(.system(size: 18)).padding(.bottom,16).foregroundColor(Color("Dark 1"))
+                AppImageUIView(url: contact?.thumbnail ?? "").padding(.bottom,12)
+            }
+        })
     }
+    
+    func openMailApp() {
+        let email = contact?.email ?? ""
+            let subject = "[Kolaborasi] - [Subject email]"
+        let body = "Halo, saya ingin bertanya terkait \(contact?.titleID ?? "")"
+
+        if let encodedSubject = subject.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+                  let encodedBody = body.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+                  let url = URL(string: "mailto:\(email)?subject=\(encodedSubject)&body=\(encodedBody)")
+               {
+                   UIApplication.shared.open(url)
+               }
+        }
+    
+    
 }

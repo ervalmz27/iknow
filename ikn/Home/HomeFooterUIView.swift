@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct HomeFooterUIView: View {
-    @State private var showTncView: Bool = false
     var body: some View {
         VStack{
             Button(action: {
@@ -25,9 +24,10 @@ struct HomeFooterUIView: View {
                             .stroke(Color("Dark 2"), lineWidth: 1) // Border color and width
                     )
             }
-            Button(action: {
-                showTncView = true
-            }) {
+           
+            NavigationLink{
+                TncUIView().navigationBarHidden(true)
+            }label: {
                 Text("Syarat dan Ketentuan Aplikasi")
                     .bold()
                     .foregroundColor(Color("Primary Action Color"))
@@ -35,9 +35,7 @@ struct HomeFooterUIView: View {
                     .padding(.horizontal, 20)
                     .padding(.vertical, 10)
             }
-            .sheet(isPresented: $showTncView) {
-                TncUIView()
-            }
+            
         }
     }
 }

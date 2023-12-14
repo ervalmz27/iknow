@@ -47,15 +47,19 @@ struct SectionOneItemView:View{
         self.sectionData = sectionData
     }
     var body: some View{
-        VStack(alignment: .leading){
-            
-            AppImageUIView(url: sectionData.thumbnail ?? "")
-            Text(sectionData.tourismCategoryTitleID ?? "").bold().font(.system(size: 12)).foregroundStyle(Color("Dark 2"), Color("Dark 2")).padding(.top,12)
-            Text(sectionData.titleID ?? "").bold().font(.system(size: 12)).foregroundStyle(Color("Dark 1"), Color("Dark 1")).padding(.top,4).multilineTextAlignment(.leading)
-                .lineLimit(1)
-                .truncationMode(.tail)
-            Text(sectionData.location ?? "").bold().font(.system(size: 12)).foregroundStyle(Color("IKN App Brown"), Color("IKN App Brown")).padding(.top,4)
-            
+        NavigationLink{
+            AppWebView(urlString: sectionData.mapLink ?? "", title: sectionData.titleID ?? "").navigationBarHidden(true)
+        }label: {
+            VStack(alignment: .leading){
+                
+                AppImageUIView(url: sectionData.thumbnail ?? "")
+                Text(sectionData.tourismCategoryTitleID ?? "").bold().font(.system(size: 12)).foregroundStyle(Color("Dark 2"), Color("Dark 2")).padding(.top,12)
+                Text(sectionData.titleID ?? "").bold().font(.system(size: 12)).foregroundStyle(Color("Dark 1"), Color("Dark 1")).padding(.top,4).multilineTextAlignment(.leading)
+                    .lineLimit(1)
+                    .truncationMode(.tail)
+                Text(sectionData.location ?? "").bold().font(.system(size: 12)).foregroundStyle(Color("IKN App Brown"), Color("IKN App Brown")).padding(.top,4)
+                
+            }
         }
     }
 }
