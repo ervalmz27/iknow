@@ -13,15 +13,38 @@ struct AllMenuUIView: View {
         self.menus = menus
     }
     var body: some View {
-        BaseUIView(content: ScrollView{
-            VStack(alignment: .leading){
-                ForEach(menus ?? [],id: \.id){ item in
-                    if(item.titleID != "Lihat Semua Fitur"){
-                        AllMenuItem(menu: item)
+        NavigationView{
+            BaseUIView(content: ScrollView{
+                VStack(alignment: .leading){
+                    ForEach(menus ?? [],id: \.id){ item in
+                        if(item.titleID != "Lihat Semua Fitur"){
+                            NavigationLink{
+                                if(item.isUnderDevelopment == false){
+                                    if(item.url == nil){
+                                        let path = item.titleID
+                                        if path == "Daftar Kontak Darurat" {
+                                            ContactsUIView().navigationBarHidden(true)
+                                        } else if path == "Pelayanan Kesehatan" {
+                                            Text("Health Service")
+                                        } else if path == "population-services" {
+                                            Text("Population Service")
+                                        } else if path == "topup-bills" {
+                                            Text("Top Up")
+                                        } else if path == "public-transportation" {
+                                            Text("Public Transportation")
+                                        }
+                                    }else{
+                                        AppWebView(urlString: item.url ?? "", title: item.titleID ?? "").navigationBarHidden(true)
+                                    }
+                                }
+                            } label: {
+                                AllMenuItem(menu: item)
+                            }
+                        }
                     }
                 }
-            }
-        }, title: "Menu", isClose: true)
+            }, title: "Menu", isClose: true)
+        }
     }
 }
 
@@ -37,17 +60,17 @@ struct AllMenuItem : View {
                 Text("\(menu.titleID ?? "")").font(.system(size: 16)).foregroundStyle(Color("Dark 1"))
                 Spacer()
                 if(menu.isUnderDevelopment == true){
-                    HStack{
-                        Text("SEGERA HADIR").font(.system(size: 8)).foregroundStyle(.white).padding(.horizontal,4).padding(.vertical,2)
-                    }.background().presentationCornerRadius(12)
+                    Text("SEGERA HADIR")
+                                .font(.system(size: 8))
+                                .padding(2)
+                                .padding(.horizontal, 4)
+                                .foregroundColor(.white)
+                                .background(Color("Primary Action Color"))
+                                .cornerRadius(12)
                 }
             }
             DottedSeparator(color: Color(hex: 0xDDDDDD), lineWidth: 1, dash: [4, 4])
                             .padding(.bottom, 8)
         }
     }
-}
-
-#Preview {
-    AllMenuUIView(menus: [])
 }

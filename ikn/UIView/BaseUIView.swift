@@ -21,7 +21,11 @@ struct BaseUIView<Content: View>: View {
             Color("IKN App Brown").ignoresSafeArea()
             VStack{
                 HStack{
-                    Image("btn_close").resizable().frame(width: 40,height: 40).padding(.trailing,8)
+                    NavigationLink{
+                        HomeUIView().navigationBarHidden(true)
+                    }label: {
+                        Image("btn_close").resizable().frame(width: 40,height: 40).padding(.trailing,8)
+                    }
                     Text(title).font(.system(size: 18,weight: .semibold))
                     Spacer()
                 }

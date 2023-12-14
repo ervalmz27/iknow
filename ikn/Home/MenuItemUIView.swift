@@ -8,24 +8,12 @@
 import SwiftUI
 
 struct MenuItemUIView: View {
-    @State private var showAllMenu:Bool=false
-    @State private var showWebView:Bool=false
     let menu : HomeMenu
-    let allMenu: [HomeMenu]?
-    init(menu: HomeMenu,allMenu: [HomeMenu]?) {
+    init(menu: HomeMenu) {
         self.menu = menu
-        self.allMenu = allMenu
     }
     
     var body: some View {
-        Button(action:{
-            if(menu.titleID=="Lihat Semua Fitur"){
-                showAllMenu=true
-            }else{
-                showWebView = true
-            }
-        }
-        ){
             VStack{
                 AsyncImage(url: URL(string: menu.icon ?? "")) { phase in
                                 switch phase {
@@ -48,11 +36,7 @@ struct MenuItemUIView: View {
                 )
                 Text(menu.titleID ?? "")
                     .font(.system(size: 11, weight: .regular)).multilineTextAlignment(.center).foregroundColor(Color("Dark 1"))
-            }.sheet(isPresented:$showAllMenu){
-                AllMenuUIView(menus: allMenu)
-            } .sheet(isPresented: $showWebView) {
-                WebView(urlString: menu.url ?? "")
-            }
         }
-    }
+        }
+    
 }

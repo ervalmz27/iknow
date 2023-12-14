@@ -55,6 +55,8 @@
 		F79B744B2B2770E600A30667 /* AllMenuUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79B744A2B2770E600A30667 /* AllMenuUIView.swift */; };
 		F79B744D2B27E33100A30667 /* ContactsUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79B744C2B27E33100A30667 /* ContactsUIView.swift */; };
 		F79B744F2B27E34900A30667 /* ContactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79B744E2B27E34900A30667 /* ContactsViewModel.swift */; };
+		F7B838D92B29F721009D1869 /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B838D82B29F721009D1869 /* AppRoute.swift */; };
+		F7B838DB2B2A2083009D1869 /* TestSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B838DA2B2A2083009D1869 /* TestSwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +109,8 @@
 		F79B744A2B2770E600A30667 /* AllMenuUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMenuUIView.swift; sourceTree = "<group>"; };
 		F79B744C2B27E33100A30667 /* ContactsUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsUIView.swift; sourceTree = "<group>"; };
 		F79B744E2B27E34900A30667 /* ContactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewModel.swift; sourceTree = "<group>"; };
+		F7B838D82B29F721009D1869 /* AppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
+		F7B838DA2B2A2083009D1869 /* TestSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSwiftUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +198,7 @@
 		C9C7B1072B0DC88A00CE2C2D /* ikn */ = {
 			isa = PBXGroup;
 			children = (
+				F7B838D72B29F708009D1869 /* Routing */,
 				C9E88DBC2B296BB7000B2865 /* Browser */,
 				C9C7204F2B0F0DD600B5AABA /* Network */,
 				C9C7B1232B0DFAD600CE2C2D /* Screen */,
@@ -204,6 +209,7 @@
 				C9C7B1182B0DC90600CE2C2D /* SplashScreenView.swift */,
 				C9C7B10C2B0DC88C00CE2C2D /* Assets.xcassets */,
 				C9C7B10E2B0DC88C00CE2C2D /* Preview Content */,
+				F7B838DA2B2A2083009D1869 /* TestSwiftUIView.swift */,
 			);
 			path = ikn;
 			sourceTree = "<group>";
@@ -343,6 +349,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		F7B838D72B29F708009D1869 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				F7B838D82B29F721009D1869 /* AppRoute.swift */,
+			);
+			name = Routing;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -419,6 +433,7 @@
 				F721DB6B2B26C4A100625D7F /* TncUIView.swift in Sources */,
 				C9E88DC02B299072000B2865 /* HealthUiView.swift in Sources */,
 				C9E88DCE2B29ADC5000B2865 /* HealtListUIView.swift in Sources */,
+				F7B838DB2B2A2083009D1869 /* TestSwiftUIView.swift in Sources */,
 				C9C7B10B2B0DC88A00CE2C2D /* ContentView.swift in Sources */,
 				F721DB932B27532100625D7F /* WeatherModel.swift in Sources */,
 				F721DB732B26E22E00625D7F /* HomeUIView.swift in Sources */,
@@ -434,6 +449,7 @@
 				F7489F962B27E6480089B832 /* ContactsHeaderUIView.swift in Sources */,
 				C9C7B11D2B0DE18300CE2C2D /* DashboardView.swift in Sources */,
 				C9E88DCA2B29AC90000B2865 /* HealthHeaderUIView.swift in Sources */,
+				F7B838D92B29F721009D1869 /* AppRoute.swift in Sources */,
 				F721DB912B2752C800625D7F /* ArticlesViewModel.swift in Sources */,
 				C988E87A2B16D41400CDD650 /* HomeViewModel.swift in Sources */,
 				C988E8782B16D3CA00CDD650 /* HomeScreenViewBackup.swift in Sources */,

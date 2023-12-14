@@ -11,17 +11,19 @@ struct TncUIView: View {
     @ObservedObject var viewModel = TncViewModel()
 
     var body: some View {
-        BaseUIView(
-            content: ScrollView{
-                VStack{
-                    Text(viewModel.tnc?.contentID ?? "").font(.system(size: 14)).foregroundStyle(Color("Dark 1"))
-                }
-            },
-            title: "Syarat dan Ketentuan",
-            isClose: true
-        )
-        .onAppear {
-            viewModel.fetchTnc()
+        NavigationView{
+            BaseUIView(
+                content: ScrollView{
+                    VStack{
+                        Text(viewModel.tnc?.contentID ?? "").font(.system(size: 14)).foregroundStyle(Color("Dark 1"))
+                    }
+                },
+                title: "Syarat dan Ketentuan",
+                isClose: true
+            )
+            .onAppear {
+                viewModel.fetchTnc()
+            }
         }
     }
 }

@@ -21,10 +21,18 @@ struct SectionTwoUIView: View {
             ScrollView(.horizontal){
                 HStack{
                     ForEach(sectionTwo?.contents ?? [], id: \.id) { item in
-                        SectionTwoItemView(sectionData: item).frame(width: 200).padding(.trailing,14)
+                        NavigationLink{
+                            AppWebView(urlString: item.link ?? "",title: item.titleID ?? "").navigationBarHidden(true)
+                        }label: {
+                            SectionTwoItemView(sectionData: item).frame(width: 200).padding(.trailing,14).navigationBarHidden(true)
+                        }
                     }
                     
-                    LoadMoreView()
+                    NavigationLink{
+                        ArticlesUIView().navigationBarHidden(true)
+                    }label: {
+                        LoadMoreView()
+                    }
                 }
             }
         }
@@ -33,19 +41,11 @@ struct SectionTwoUIView: View {
 
 	
 struct LoadMoreView: View {
-    @State private var isShowingArticlesView = false
-
     var body: some View {
-        Button(action: {
-            isShowingArticlesView = true
-        }) {
             VStack(alignment: .leading) {
                 Image(systemName: "arrow.right")
                 Text("Lihat Semua Artikel").font(.system(size: 11))
-            }
-        }.sheet(isPresented: $isShowingArticlesView){
-            ArticlesUIView()
-        }
+            }.foregroundColor(Color("Dark 1"))
     }
 }
 
@@ -57,7 +57,7 @@ struct SectionTwoItemView:View{
     var body: some View{
         VStack(alignment: .leading){
             AppImageUIView(url: sectionData.thumbnail ?? "").padding(.bottom,12).frame(height: 200)
-            Text("\(sectionData.titleID ?? "")").padding(.bottom,4).bold().font(.system(size: 16)).lineLimit(1).truncationMode(/*@START_MENU_TOKEN@*/.tail/*@END_MENU_TOKEN@*/).multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
+            Text("\(sectionData.titleID ?? "")").padding(.bottom,4).bold().font(.system(size: 16)).lineLimit(1).truncationMode(/*@START_MENU_TOKEN@*/.tail/*@END_MENU_TOKEN@*/).multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/).foregroundColor(Color("Dark 1"))
             Text("\(formatDateString(_: sectionData.createdAt ?? ""))").bold().font(.system(size: 14)).foregroundStyle(Color("IKN App Brown"),Color("IKN App Brown"))
         }
     }
