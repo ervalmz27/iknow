@@ -12,7 +12,9 @@ import SwiftUI
 struct HealthHeaderUIView: View {
     var body: some View {
         HStack{
-            Button(action: {}){
+            NavigationLink{
+                HomeUIView().navigationBarHidden(true)
+            }label: {
                 Image("btn_back").resizable().frame(width: 56,height: 56).padding(.trailing,16)
             }
             Text("Pelayanan Kesehatan").font(.system(size: 18,weight:.semibold)).foregroundStyle(.white)

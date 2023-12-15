@@ -24,7 +24,7 @@ struct HomeMenuUIView: View {
                                 if path == "Daftar Kontak Darurat" {
                                     ContactsUIView().navigationBarHidden(true)
                                 } else if path == "Pelayanan Kesehatan" {
-                                    Text("Health Service")
+                                    HealtUIView().navigationBarHidden(true)
                                 } else if path == "population-services" {
                                     Text("Population Service")
                                 } else if path == "topup-bills" {

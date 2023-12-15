@@ -22,6 +22,8 @@ class HealthViewModel: ObservableObject{
                     let decodedData = try JSONDecoder().decode([Health].self, from: data)
                     DispatchQueue.main.async {
                         self.shortHealth = decodedData
+                        
+                       print(decodedData)
                     }
                 } catch {
                     print("Error decoding JSON: \(error)")
@@ -58,7 +60,7 @@ class HealthViewModel: ObservableObject{
     }
     
     private func fetchHealth(){
-        network.fetchData(path: "/api/pages/healths?category=\(String(describing: self.selectedHealth?.title_en))", method: .get){
+        network.fetchData(path: "/api/pages/healths?category=\(String(describing: self.selectedHealth?.title_id))", method: .get){
             result in
             print("DATAKU \(result)")
             switch result {
