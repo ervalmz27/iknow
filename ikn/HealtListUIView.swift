@@ -9,7 +9,6 @@ import SwiftUI
 
 struct HealthListUIView: View {
     let healths : HealthResponse?
-    let ab = "bengik"
     init(healths: HealthResponse?) {
         self.healths = healths
     }
@@ -18,8 +17,8 @@ struct HealthListUIView: View {
         ZStack{
             Color.white
             //            Text("\(healths?.message ?? "")").font(.system(size: 16)).multilineTextAlignment(.center).padding(16)
-            List(healtList ?? [],id: \.id) {item in
-                List{
+            ForEach(healtList ?? [],id: \.id) {item in
+              
                     VStack(alignment: .leading){
                         
                         Text(item.titleID ?? "").bold().font(.system(size: 14))
@@ -40,7 +39,7 @@ struct HealthListUIView: View {
                                 Text(item.phone ?? "").font(.system(size: 12)).padding(.top,4).multilineTextAlignment(.leading)
                                     .lineLimit(1)
                                     .truncationMode(.tail)
-                            }
+                            
                         }
                         
                         //                        AppImageUIView(url: item.thumbnail ?? "").frame(width: 28,height: 28)
