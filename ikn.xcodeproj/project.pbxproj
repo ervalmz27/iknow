@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C92F178F2B303DCA00DF61A5 /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = C92F178E2B303DCA00DF61A5 /* MarkdownUI */; };
 		C988E8782B16D3CA00CDD650 /* HomeScreenViewBackup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C988E8772B16D3CA00CDD650 /* HomeScreenViewBackup.swift */; };
 		C988E87A2B16D41400CDD650 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C988E8792B16D41400CDD650 /* HomeViewModel.swift */; };
 		C988E87D2B171B8B00CDD650 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C988E87C2B171B8B00CDD650 /* WebView.swift */; };
@@ -118,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C92F178F2B303DCA00DF61A5 /* MarkdownUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +375,9 @@
 			dependencies = (
 			);
 			name = ikn;
+			packageProductDependencies = (
+				C92F178E2B303DCA00DF61A5 /* MarkdownUI */,
+			);
 			productName = ikn;
 			productReference = C9C7B1052B0DC88A00CE2C2D /* ikn.app */;
 			productType = "com.apple.product-type.application";
@@ -401,6 +406,9 @@
 				Base,
 			);
 			mainGroup = C9C7B0FC2B0DC88A00CE2C2D;
+			packageReferences = (
+				C92F178D2B303DCA00DF61A5 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */,
+			);
 			productRefGroup = C9C7B1062B0DC88A00CE2C2D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -683,6 +691,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C92F178D2B303DCA00DF61A5 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/gonzalezreal/swift-markdown-ui.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C92F178E2B303DCA00DF61A5 /* MarkdownUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C92F178D2B303DCA00DF61A5 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */;
+			productName = MarkdownUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C9C7B0FD2B0DC88A00CE2C2D /* Project object */;
 }

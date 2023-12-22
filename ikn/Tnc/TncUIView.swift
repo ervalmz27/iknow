@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MarkdownUI
 
 struct TncUIView: View {
     @ObservedObject var viewModel = TncViewModel()
@@ -15,7 +16,7 @@ struct TncUIView: View {
             BaseUIView(
                 content: ScrollView{
                     VStack{
-                        Text(viewModel.tnc?.contentID ?? "").font(.system(size: 14)).foregroundStyle(Color("Dark 1"))
+                        Markdown(viewModel.tnc?.contentID ?? "").font(.system(size: 14)).foregroundStyle(Color("Dark 1"))
                     }
                 },
                 title: "Syarat dan Ketentuan",
