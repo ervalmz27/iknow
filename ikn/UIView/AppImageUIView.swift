@@ -8,27 +8,27 @@
 import SwiftUI
 
 struct AppImageUIView: View {
-    let url:String
-    init( url: String) {
+    let url: String
+    
+    init(url: String) {
         self.url = url
     }
     
     var body: some View {
-        AsyncImage(url: URL(string:url)) { phase in
+        AsyncImage(url: URL(string: url)) { phase in
             switch phase {
             case .success(let image):
                 image
                     .resizable()
-//                    .scaledToFit()
             case .failure:
                 Image(systemName: "ErrorImage")
                     .resizable()
-                    .scaledToFit()
             case .empty:
                 ProgressView()
             @unknown default:
                 EmptyView()
             }
-        }.scaledToFit()
+        }
     }
 }
+

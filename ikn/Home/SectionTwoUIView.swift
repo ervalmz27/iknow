@@ -56,22 +56,7 @@ struct SectionTwoItemView:View{
     }
     var body: some View{
         VStack(alignment: .leading){
-//            AppImageUIView(url: sectionData.thumbnail ?? "").padding(.bottom,12).frame(height: 200)
-            AsyncImage(url: URL(string: sectionData.thumbnail ?? "")) { phase in
-                        switch phase {
-                        case .empty:
-                            ProgressView()
-                        case .success(let image):
-                            image
-                                .resizable()
-                                .clipShape(RoundedRectangle(cornerRadius: 5))
-                        case .failure:
-                            Text("Failed to load image")
-                        @unknown default:
-                            EmptyView()
-                        }
-                    }
-            .frame( height: 129)
+            AppImageUIView(url: sectionData.thumbnail ?? "").cornerRadius(5).frame(width: 200,height: 159).scaledToFill()
                    Text("\(sectionData.titleID ?? "")").padding(.bottom,4).bold().font(.system(size: 16)).lineLimit(2).truncationMode(/*@START_MENU_TOKEN@*/.tail/*@END_MENU_TOKEN@*/).multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/).foregroundColor(Color("Dark 1"))
             Text("\(formatDateString(_: sectionData.createdAt ?? ""))").bold().font(.system(size: 14)).foregroundStyle(Color("IKN App Brown"),Color("IKN App Brown"))
         }
