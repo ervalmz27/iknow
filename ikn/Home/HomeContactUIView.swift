@@ -18,7 +18,9 @@ struct HomeContactUIView: View {
         }, label: {
             VStack(alignment: .leading){
                 Text("\(contact?.titleID ?? "")").bold().font(.system(size: 18)).padding(.bottom,4).foregroundColor(Color.black)
-                AppImageUIView(url: contact?.thumbnail ?? "").padding(.bottom,8)
+                AppImageUIView(url: contact?.thumbnail ?? "").frame(
+                    height: 159
+                ).cornerRadius(5).padding(.bottom,8)
             }
         })
     }

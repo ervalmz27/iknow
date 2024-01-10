@@ -53,8 +53,7 @@ struct SectionOneItemView:View{
             AppWebView(urlString: sectionData.mapLink ?? "", title: sectionData.titleID ?? "").navigationBarHidden(true)
         }label: {
             VStack(alignment: .leading){
-                
-                AppImageUIView(url: sectionData.thumbnail ?? "").cornerRadius(5).frame(width: 158,height: 159)
+                AppImageUIView(url: sectionData.thumbnail ?? "").cornerRadius(5).frame(width: 158,height: 159).scaledToFit()
                 Text(sectionData.tourismCategoryTitleID ?? "").bold().font(.system(size: 12)).foregroundStyle(Color("Dark 2"), Color("Dark 2"))
                 Text(sectionData.titleID ?? "").bold().font(.system(size: 17)).foregroundStyle(Color("Dark 1"), Color("Dark 1")).multilineTextAlignment(.leading)
                     .lineLimit(2)
