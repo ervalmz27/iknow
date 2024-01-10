@@ -18,7 +18,7 @@ struct BaseUIView<Content: View>: View {
     }
     var body: some View {
         ZStack{
-            Color("IKN App Brown").ignoresSafeArea()
+            Color("IKN Green").ignoresSafeArea()
             VStack{
                 HStack{
                     NavigationLink{

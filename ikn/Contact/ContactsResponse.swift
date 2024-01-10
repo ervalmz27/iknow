@@ -7,7 +7,17 @@
 
 import Foundation
 
-struct ContactsResponse : Codable{
-    let message:String?
-    let list_contact:[Contact]?
+//struct ContactsResponse : Codable{
+//    let message:String?
+//    let list_contact:[Contact]?
+//}
+
+struct ContactsResponse: Codable {
+    let message: String
+    let listContact: [Contact]
+    
+    enum CodingKeys: String, CodingKey {
+        case message
+        case listContact = "list_contact"
+    }
 }

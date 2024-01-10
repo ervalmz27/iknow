@@ -66,8 +66,8 @@ struct HomeMenu: Codable {
     let order: Int?
     let displayOnHome: Bool?
     let titleID, titleEn: String?
-    let url: String? = nil
-    let path: String? = nil
+    let url: String?
+    let path: String?
     let isUnderDevelopment: Bool?
 
     enum CodingKeys: String, CodingKey {

@@ -17,7 +17,7 @@ struct SectionTwoUIView: View {
     
     var body: some View {
         VStack(alignment: .leading){
-            Text("\(sectionTwo?.titleID ?? "")").bold().font(.system(size: 18)).padding(.bottom,12)
+            Text("\(sectionTwo?.titleID ?? "")").bold().font(.system(size: 18)).padding(.bottom,8)
             ScrollView(.horizontal){
                 HStack{
                     ForEach(sectionTwo?.contents ?? [], id: \.id) { item in
@@ -56,8 +56,23 @@ struct SectionTwoItemView:View{
     }
     var body: some View{
         VStack(alignment: .leading){
-            AppImageUIView(url: sectionData.thumbnail ?? "").padding(.bottom,12).frame(height: 200)
-            Text("\(sectionData.titleID ?? "")").padding(.bottom,4).bold().font(.system(size: 16)).lineLimit(1).truncationMode(/*@START_MENU_TOKEN@*/.tail/*@END_MENU_TOKEN@*/).multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/).foregroundColor(Color("Dark 1"))
+//            AppImageUIView(url: sectionData.thumbnail ?? "").padding(.bottom,12).frame(height: 200)
+            AsyncImage(url: URL(string: sectionData.thumbnail ?? "")) { phase in
+                        switch phase {
+                        case .empty:
+                            ProgressView()
+                        case .success(let image):
+                            image
+                                .resizable()
+                                .clipShape(RoundedRectangle(cornerRadius: 5))
+                        case .failure:
+                            Text("Failed to load image")
+                        @unknown default:
+                            EmptyView()
+                        }
+                    }
+            .frame( height: 129)
+                   Text("\(sectionData.titleID ?? "")").padding(.bottom,4).bold().font(.system(size: 16)).lineLimit(2).truncationMode(/*@START_MENU_TOKEN@*/.tail/*@END_MENU_TOKEN@*/).multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/).foregroundColor(Color("Dark 1"))
             Text("\(formatDateString(_: sectionData.createdAt ?? ""))").bold().font(.system(size: 14)).foregroundStyle(Color("IKN App Brown"),Color("IKN App Brown"))
         }
     }

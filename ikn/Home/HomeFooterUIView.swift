@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct HomeFooterUIView: View {
+    @State private var isShowingWebView: Bool = false
     var body: some View {
-        VStack{
-            Button(action: {
-                // Action when the button is tapped
-            }) {
+        //    https://www.ikn.go.id/MasukanSmartCityApp
+        VStack{ 
+            NavigationLink{
+                AppWebView(urlString: "https://www.ikn.go.id/MasukanSmartCityApp",title: "Kirim Saran dan Kritik"  ).navigationBarHidden(true)
+            }label: {
                 Text("Kirim Saran dan Kritik")
                     .bold()
                     .font(.system(size: 16))
@@ -24,21 +26,21 @@ struct HomeFooterUIView: View {
                             .stroke(Color("Dark 2"), lineWidth: 1) // Border color and width
                     )
             }
-           
-            NavigationLink{
-                TncUIView().navigationBarHidden(true)
-            }label: {
-                Text("Syarat dan Ketentuan Aplikasi")
-                    .bold()
-                    .foregroundColor(Color("Primary Action Color"))
-                    .underline()
-                    .padding(.horizontal, 20)
-                    .padding(.vertical, 10)
+                NavigationLink{
+                    TncUIView().navigationBarHidden(true)
+                }label: {
+                    Text("Syarat dan Ketentuan Aplikasi")
+                        .bold()
+                        .foregroundColor(Color("Primary Action Color"))
+                        .underline()
+                        .padding(.horizontal, 20)
+                        .padding(.vertical, 10)
+                }
+                
             }
-            
         }
     }
-}
+
 
 #Preview {
     HomeFooterUIView()

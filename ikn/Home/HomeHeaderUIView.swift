@@ -19,10 +19,10 @@ struct HomeHeaderUIView: View {
         HStack(alignment:.center){
             Image("logo")
             Spacer()
-            AppImageUIView(url: weather?.data?.icon ?? "").padding(.trailing,6).frame(width: 40,height: 40)
+            ImageView(urlString: weather?.data?.icon ?? "").padding(.trailing,6).frame(width: 40,height: 40)
             VStack(alignment: .leading){
                 Text("\(weather?.data?.temperature ?? "0")°C").font(.system(size: 11))
-                Text("\(weather?.data?.weather ?? "")").font(.system(size: 12)).foregroundStyle(Color("Primary Action Color"))
+                Text("\(weather?.data?.weather ?? "")").font(.system(size: 12)).foregroundStyle(Color("Dark 1"))
             }
         }
     }

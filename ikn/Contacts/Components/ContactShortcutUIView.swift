@@ -17,7 +17,15 @@ struct ContactShortcutUIView: View {
             Color.white
             HStack{
                 ForEach(contacts ?? [],id: \.id){item in
-                    Button(action: {}){
+                    Button(action: {
+                        let telephone = "tel://"
+                        let formattedString = telephone + item.phone!
+                        if let phoneURL = URL(string: formattedString), UIApplication.shared.canOpenURL(phoneURL) {
+                            UIApplication.shared.open(phoneURL, options: [:], completionHandler: nil)
+                        } else {
+                            print("Invalid phone number or unable to open URL")
+                        }
+                    }){
                         VStack{
                             AppImageUIView(url: item.thumbnail ?? "").frame(width: 48,height: 48)
                             Text("\(item.titleID ?? "")").font(.system(size: 11)).lineLimit(2).multilineTextAlignment(.center).foregroundColor(Color("Dark 1"))

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SectionOneUIView: View {
+    
     let sectionOne : Section1?
     init(sectionOne: Section1?) {
         self.sectionOne = sectionOne
@@ -16,7 +17,7 @@ struct SectionOneUIView: View {
     var body: some View {
         let sectionData = sectionOne?.contents
         VStack(alignment: .leading){
-            Text("\(sectionOne?.titleID ?? "")").bold().font(.system(size: 18))
+            Text("\(sectionOne?.titleID ?? "")").bold().font(.system(size: 18)).foregroundStyle(Color("Dark 1"))
             LazyVGrid(columns: Array(repeating: GridItem(), count: 2), spacing: 12) {
                 ForEach(sectionData ?? [], id: \.id) { item in
                     SectionOneItemView(sectionData: item)
@@ -35,13 +36,14 @@ struct SectionOneUIView: View {
                         RoundedRectangle(cornerRadius: 8) // Rounded corners
                             .stroke(Color("Dark 2"), lineWidth: 1) // Border color and width
                     )
-            }.padding(.vertical,16)
+            }.padding(.vertical,8)
         }
     }
 }
 
 
 struct SectionOneItemView:View{
+   
     let sectionData : Section1_Content
     init(sectionData: Section1_Content) {
         self.sectionData = sectionData
@@ -52,12 +54,12 @@ struct SectionOneItemView:View{
         }label: {
             VStack(alignment: .leading){
                 
-                AppImageUIView(url: sectionData.thumbnail ?? "")
-                Text(sectionData.tourismCategoryTitleID ?? "").bold().font(.system(size: 12)).foregroundStyle(Color("Dark 2"), Color("Dark 2")).padding(.top,12)
-                Text(sectionData.titleID ?? "").bold().font(.system(size: 12)).foregroundStyle(Color("Dark 1"), Color("Dark 1")).padding(.top,4).multilineTextAlignment(.leading)
-                    .lineLimit(1)
+                AppImageUIView(url: sectionData.thumbnail ?? "").cornerRadius(5).frame(width: 158,height: 159)
+                Text(sectionData.tourismCategoryTitleID ?? "").bold().font(.system(size: 12)).foregroundStyle(Color("Dark 2"), Color("Dark 2"))
+                Text(sectionData.titleID ?? "").bold().font(.system(size: 17)).foregroundStyle(Color("Dark 1"), Color("Dark 1")).multilineTextAlignment(.leading)
+                    .lineLimit(2)
                     .truncationMode(.tail)
-                Text(sectionData.location ?? "").bold().font(.system(size: 12)).foregroundStyle(Color("IKN App Brown"), Color("IKN App Brown")).padding(.top,4)
+                Text(sectionData.location ?? "").bold().font(.system(size: 12)).foregroundStyle(Color("IKN App Brown"), Color("IKN App Brown"))
                 
             }
         }

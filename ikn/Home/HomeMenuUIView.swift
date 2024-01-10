@@ -15,11 +15,11 @@ struct HomeMenuUIView: View {
         self.filteredMenu = filteredMenu
     }
     var body: some View {
-            LazyVGrid(columns: Array(repeating: GridItem(), count: 4), spacing: 8) {
+            LazyVGrid(columns: Array(repeating: GridItem(), count: 4), spacing: 4) {
                 ForEach(filteredMenu ?? [], id: \.order) { item in
                     NavigationLink{
                         if(item.isUnderDevelopment == false){
-                            if(item.url == nil){
+                            if(item.path != nil){
                                 let path = item.titleID
                                 if path == "Daftar Kontak Darurat" {
                                     ContactsUIView().navigationBarHidden(true)

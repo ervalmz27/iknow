@@ -26,7 +26,7 @@ struct HomeMainLinkUIView: View {
                                             .resizable()
                                             .scaledToFit()
                                     case .failure:
-                                        Image(systemName: "photo")
+                                        Image(systemName: "ErrorImage")
                                             .resizable()
                                             .scaledToFit()
                                     case .empty:

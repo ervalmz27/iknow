@@ -14,8 +14,8 @@ struct HealtUIView: View {
             Color("IKN App Brown").ignoresSafeArea()
             VStack{
                 HealthHeaderUIView().padding(.bottom,16)
-                HealthCategoryUIView(viewModel: viewModel,categories: viewModel.categories)
-                HealthListUIView(healths: viewModel.healthResponse)
+                HealthCategoryUIView(viewModel: viewModel,categories: viewModel.categories,number: viewModel.number)
+                HealthListUIView(healths: viewModel.shortHealth,title:viewModel.title,viewModel: viewModel)
             }.padding(16)
         }.onAppear{
             viewModel.fetchShortHealth()

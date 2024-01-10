@@ -23,6 +23,7 @@ struct Health: Codable {
     let openTime,rsType : String?
     let phone:String?
     let healthCategoryId : Int?
+    let mapLink : String?
     enum CodingKeys: String, CodingKey {
         case id
         case titleID = "title_id"
@@ -30,6 +31,7 @@ struct Health: Codable {
         case openTime = "open_time"
         case rsType = "rs_type"
         case healthCategoryId = "health_category_id"
+        case mapLink = "map_link"
         case latitude, longitude ,address,phone
     }
 }

@@ -10,9 +10,11 @@ import SwiftUI
 struct ContactsCategoryUIView: View {
     let viewModel: ContactsViewModel
     let categories : [ContactCategory]?
-    init(viewModel: ContactsViewModel, categories: [ContactCategory]) {
+    let number :Int
+    init(viewModel: ContactsViewModel, categories: [ContactCategory],number:Int) {
         self.viewModel = viewModel
         self.categories = categories
+        self.number = number
     }
 
     var body: some View {
@@ -28,12 +30,12 @@ struct ContactsCategoryUIView: View {
                             .fontWeight(.semibold)
                             .padding(.horizontal,10)
                             .padding(.vertical,10)
-                            .foregroundColor(selectedOrder == item.order ? .yellow : .white)
-                            .background(selectedOrder == item.order ? Color.white : Color.clear)
+                            .foregroundColor(viewModel.number == item.order ? Color("IKN App Brown") : .white)
+                            .background(viewModel.number == item.order ? Color.white : Color.clear)
                             .cornerRadius(100)
                             .overlay(
                                 RoundedRectangle(cornerRadius: 100)
-                                    .stroke(selectedOrder == item.order ? Color.white : .yellow, lineWidth: selectedOrder == item.order ? 0 : 1)
+                                    .stroke(viewModel.number == item.order ? Color.white : Color.white , lineWidth: selectedOrder == item.order ? 0 : 1)
                             )
                     }
                 }

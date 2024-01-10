@@ -19,8 +19,9 @@ class NetworkingManager {
     typealias CompletionHandler = (Result<Data, Error>) -> Void
     
     func fetchData(path: String, method: HTTPMethod, queryParams: [String: String]? = nil, headers: [String: String]? = nil, completion: @escaping CompletionHandler) {
-        var components = URLComponents(string: "https://103.59.95.19")
-        
+        var components = URLComponents(string: "https://smartcityapp.ikn.go.id")
+        //  https://103.59.95.19
+//    https://smartcityapp.ikn.go.id
         // Ensure path starts with a "/"
         if !path.hasPrefix("/") {
             components?.path += "/"

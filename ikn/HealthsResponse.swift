@@ -9,6 +9,5 @@ import Foundation
 
 
 struct HealthResponse : Codable{
-    let message:String?
     let list_health:[Health]?
 }

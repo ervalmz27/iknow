@@ -2,13 +2,14 @@
 //  ContactsUIView.swift
 //  ikn
 //
-//  Created by Cong Fandi on 12/12/23.
+//  Created by Naufal on 12/12/23.
 //
 
 import SwiftUI
-
+import UIKit
 struct ContactsUIView: View {
     @ObservedObject var viewModel = ContactsViewModel()
+    
     var body: some View {
         NavigationView{
             ZStack{
@@ -16,7 +17,7 @@ struct ContactsUIView: View {
                 VStack{
                     ContactsHeaderUIView().padding(.bottom,16)
                     ContactShortcutUIView(contacts: viewModel.shortContacts).frame(height: 128)
-                    ContactsCategoryUIView(viewModel: viewModel,categories: viewModel.categories)
+                    ContactsCategoryUIView(viewModel: viewModel,categories: viewModel.categories,number: viewModel.number)
                     ContactsListUIView(contacts: viewModel.contactResponse)
                 }.padding(16)
             }.onAppear{

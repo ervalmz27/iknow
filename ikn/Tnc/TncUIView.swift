@@ -13,7 +13,7 @@ struct TncUIView: View {
 
     var body: some View {
         NavigationView{
-            BaseUIView(
+            TNCUIBase(
                 content: ScrollView{
                     VStack{
                         Markdown(viewModel.tnc?.contentID ?? "").font(.system(size: 14)).foregroundStyle(Color("Dark 1"))
@@ -22,10 +22,12 @@ struct TncUIView: View {
                 title: "Syarat dan Ketentuan",
                 isClose: true
             )
+            
             .onAppear {
                 viewModel.fetchTnc()
             }
         }
+        
     }
 }
 

@@ -19,9 +19,9 @@ struct AppImageUIView: View {
             case .success(let image):
                 image
                     .resizable()
-                    .scaledToFit()
+//                    .scaledToFit()
             case .failure:
-                Image(systemName: "photo")
+                Image(systemName: "ErrorImage")
                     .resizable()
                     .scaledToFit()
             case .empty:

@@ -21,6 +21,9 @@
 		C9C7B1192B0DC90600CE2C2D /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C7B1182B0DC90600CE2C2D /* SplashScreenView.swift */; };
 		C9C7B11B2B0DE11B00CE2C2D /* MenuItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C7B11A2B0DE11B00CE2C2D /* MenuItemModel.swift */; };
 		C9C7B11D2B0DE18300CE2C2D /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C7B11C2B0DE18300CE2C2D /* DashboardView.swift */; };
+		C9D32F762B4D49AB00FC07C5 /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D32F752B4D49AB00FC07C5 /* ImageViewModel.swift */; };
+		C9D32F782B4D4A1700FC07C5 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D32F772B4D4A1700FC07C5 /* ImageView.swift */; };
+		C9D32F7C2B4EABC600FC07C5 /* TNCUIBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D32F7B2B4EABC600FC07C5 /* TNCUIBase.swift */; };
 		C9E88DC02B299072000B2865 /* HealthUiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E88DBF2B299072000B2865 /* HealthUiView.swift */; };
 		C9E88DC22B2994A4000B2865 /* HealthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E88DC12B2994A4000B2865 /* HealthViewModel.swift */; };
 		C9E88DC42B299EEC000B2865 /* HealthsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E88DC32B299EEC000B2865 /* HealthsResponse.swift */; };
@@ -61,6 +64,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C90C76032B43EF8D00FAE5D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C988E8772B16D3CA00CDD650 /* HomeScreenViewBackup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewBackup.swift; sourceTree = "<group>"; };
 		C988E8792B16D41400CDD650 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		C988E87C2B171B8B00CDD650 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
@@ -75,6 +79,9 @@
 		C9C7B1182B0DC90600CE2C2D /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		C9C7B11A2B0DE11B00CE2C2D /* MenuItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemModel.swift; sourceTree = "<group>"; };
 		C9C7B11C2B0DE18300CE2C2D /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		C9D32F752B4D49AB00FC07C5 /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
+		C9D32F772B4D4A1700FC07C5 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		C9D32F7B2B4EABC600FC07C5 /* TNCUIBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TNCUIBase.swift; sourceTree = "<group>"; };
 		C9E88DBF2B299072000B2865 /* HealthUiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthUiView.swift; sourceTree = "<group>"; };
 		C9E88DC12B2994A4000B2865 /* HealthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthViewModel.swift; sourceTree = "<group>"; };
 		C9E88DC32B299EEC000B2865 /* HealthsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthsResponse.swift; sourceTree = "<group>"; };
@@ -200,6 +207,8 @@
 		C9C7B1072B0DC88A00CE2C2D /* ikn */ = {
 			isa = PBXGroup;
 			children = (
+				C9D32F722B4D495700FC07C5 /* Image */,
+				C90C76032B43EF8D00FAE5D9 /* Info.plist */,
 				F7B838D72B29F708009D1869 /* Routing */,
 				C9E88DBC2B296BB7000B2865 /* Browser */,
 				C9C7204F2B0F0DD600B5AABA /* Network */,
@@ -248,6 +257,15 @@
 				C9C720532B0F411D00B5AABA /* Home */,
 			);
 			name = Screen;
+			sourceTree = "<group>";
+		};
+		C9D32F722B4D495700FC07C5 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				C9D32F752B4D49AB00FC07C5 /* ImageViewModel.swift */,
+				C9D32F772B4D4A1700FC07C5 /* ImageView.swift */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 		C9E88DBC2B296BB7000B2865 /* Browser */ = {
@@ -336,6 +354,7 @@
 				F721DB702B26C60000625D7F /* BaseUIView.swift */,
 				F721DB7A2B26F28700625D7F /* DottedSeparatorUIView.swift */,
 				F721DB802B26F7BC00625D7F /* AppImageUIView.swift */,
+				C9D32F7B2B4EABC600FC07C5 /* TNCUIBase.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -435,6 +454,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9D32F782B4D4A1700FC07C5 /* ImageView.swift in Sources */,
 				F71E00822B27F3A400CB54B3 /* ContactsListUIView.swift in Sources */,
 				F721DB792B26ECFD00625D7F /* MenuItemUIView.swift in Sources */,
 				F721DB7F2B26F67700625D7F /* SectionOneUIView.swift in Sources */,
@@ -463,6 +483,7 @@
 				C988E8782B16D3CA00CDD650 /* HomeScreenViewBackup.swift in Sources */,
 				C9C7B1192B0DC90600CE2C2D /* SplashScreenView.swift in Sources */,
 				C9E88DC22B2994A4000B2865 /* HealthViewModel.swift in Sources */,
+				C9D32F762B4D49AB00FC07C5 /* ImageViewModel.swift in Sources */,
 				F721DB832B27129300625D7F /* SectionTwoUIView.swift in Sources */,
 				F721DB6D2B26C4B500625D7F /* TncViewModel.swift in Sources */,
 				F79B744F2B27E34900A30667 /* ContactsViewModel.swift in Sources */,
@@ -470,6 +491,7 @@
 				C988E87D2B171B8B00CDD650 /* WebView.swift in Sources */,
 				C9E88DCC2B29ACEC000B2865 /* HeathCategoryUiView.swift in Sources */,
 				F721DB752B26E35600625D7F /* HomeHeaderUIView.swift in Sources */,
+				C9D32F7C2B4EABC600FC07C5 /* TNCUIBase.swift in Sources */,
 				F71E00802B27EF3E00CB54B3 /* ContactsCategoryUIView.swift in Sources */,
 				F71E00792B27E8B300CB54B3 /* ContactShortcutUIView.swift in Sources */,
 				F721DB8D2B273C9300625D7F /* TncModel.swift in Sources */,
@@ -541,7 +563,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -597,7 +619,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -613,24 +635,26 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"ikn/Preview Content\"";
 				DEVELOPMENT_TEAM = MBN54724KP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "IKN Smart City";
+				INFOPLIST_FILE = ikn/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = IKNOW;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.news";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = id.ikn.smart.city;
+				PRODUCT_BUNDLE_IDENTIFIER = ikn.smart.city;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -644,24 +668,26 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"ikn/Preview Content\"";
 				DEVELOPMENT_TEAM = MBN54724KP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "IKN Smart City";
+				INFOPLIST_FILE = ikn/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = IKNOW;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.news";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = id.ikn.smart.city;
+				PRODUCT_BUNDLE_IDENTIFIER = ikn.smart.city;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
