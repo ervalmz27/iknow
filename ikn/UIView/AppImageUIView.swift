@@ -21,7 +21,7 @@ struct AppImageUIView: View {
                 image
                     .resizable()
             case .failure:
-                Image(systemName: "ErrorImage")
+                Image("ErrorImage")
                     .resizable()
             case .empty:
                 ProgressView()

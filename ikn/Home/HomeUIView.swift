@@ -9,15 +9,25 @@ import SwiftUI
 
 struct HomeUIView: View {
     @ObservedObject var viewModel = HomeViewModel()
+//    init(){
+//        for family in UIFont.familyNames {
+//             print(family)
+//
+//             for names in UIFont.fontNames(forFamilyName: family){
+//             print("== \(names)")
+//             }
+//        }
+//    }
     var body: some View {
         NavigationView{
             VStack{
                 if(viewModel.menuHome == nil){
                     LoadingView()
                 }else{
-                    HomeHeaderUIView(weather: viewModel.weather).padding(.bottom,12)
+                    
                     ScrollView{
                         VStack{
+                            HomeHeaderUIView(weather: viewModel.weather).padding(.bottom,12)
                             HomeMenuUIView(allMenu: viewModel.homeData?.menus, filteredMenu: viewModel.menuHome).padding(.bottom,2)
                             DottedSeparator(color: Color(hex: 0xDDDDDD), lineWidth: 1, dash: [4, 4])
                                             .padding(.bottom, 8)
@@ -29,7 +39,7 @@ struct HomeUIView: View {
                                             .padding(.bottom, 8)
                             SectionTwoUIView(sectionTwo: viewModel.homeData?.section2)
                             DottedSeparator(color: Color(hex: 0xDDDDDD), lineWidth: 1, dash: [4, 4])
-                                .padding(.bottom, 16).padding(.top,8)
+                               .padding(.top,8)
                             HomeContactUIView(contact: viewModel.homeData?.contact)
                                 
                             DottedSeparator(color: Color(hex: 0xDDDDDD), lineWidth: 1, dash: [4, 4])

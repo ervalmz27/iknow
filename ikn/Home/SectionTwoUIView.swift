@@ -17,7 +17,8 @@ struct SectionTwoUIView: View {
     
     var body: some View {
         VStack(alignment: .leading){
-            Text("\(sectionTwo?.titleID ?? "")").bold().font(.system(size: 18)).padding(.bottom,8)
+            Text("\(sectionTwo?.titleID ?? "")").foregroundStyle(Color("Dark 1")).font(Font.custom("Inter", size: 18)).bold()
+.padding(.bottom,8)
             ScrollView(.horizontal){
                 HStack{
                     ForEach(sectionTwo?.contents ?? [], id: \.id) { item in
@@ -55,9 +56,13 @@ struct SectionTwoItemView:View{
         self.sectionData = sectionData
     }
     var body: some View{
-        VStack(alignment: .leading){
-            AppImageUIView(url: sectionData.thumbnail ?? "").cornerRadius(5).frame(width: 200,height: 159).scaledToFill()
-                   Text("\(sectionData.titleID ?? "")").padding(.bottom,4).bold().font(.system(size: 16)).lineLimit(2).truncationMode(/*@START_MENU_TOKEN@*/.tail/*@END_MENU_TOKEN@*/).multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/).foregroundColor(Color("Dark 1"))
+        VStack(alignment: .leading,spacing: 2){
+            ImageView(urlString: sectionData.thumbnail ?? "") .aspectRatio(contentMode: .fill)
+                .frame(width: 200, height: 159)
+                                .cornerRadius(5)
+                   Text("\(sectionData.titleID ?? "")").bold().font(Font.custom("Inter", size: 16)).foregroundStyle(Color("Dark 1"), Color("Dark 1")).multilineTextAlignment(.leading)
+                .lineLimit(2)
+                .truncationMode(.tail)
             Text("\(formatDateString(_: sectionData.createdAt ?? ""))").bold().font(.system(size: 14)).foregroundStyle(Color("IKN App Brown"),Color("IKN App Brown"))
         }
     }

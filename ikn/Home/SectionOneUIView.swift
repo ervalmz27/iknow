@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct SectionOneUIView: View {
-    
+    let columns = Array(repeating: GridItem(.flexible(),spacing: 16), count: 2)
+
     let sectionOne : Section1?
     init(sectionOne: Section1?) {
         self.sectionOne = sectionOne
@@ -17,15 +18,19 @@ struct SectionOneUIView: View {
     var body: some View {
         let sectionData = sectionOne?.contents
         VStack(alignment: .leading){
-            Text("\(sectionOne?.titleID ?? "")").bold().font(.system(size: 18)).foregroundStyle(Color("Dark 1"))
-            LazyVGrid(columns: Array(repeating: GridItem(), count: 2), spacing: 12) {
+            Text("\(sectionOne?.titleID ?? "")").foregroundStyle(Color("Dark 1")).font(Font.custom("Inter", size: 18)).bold()
+
+            LazyVGrid(columns: columns, spacing: 30) {
                 ForEach(sectionData ?? [], id: \.id) { item in
-                    SectionOneItemView(sectionData: item)
+                    if item.showAtDashboard == true{
+                        SectionOneItemView(sectionData: item)
+                    }
+                 
                 }
             }
-            Button(action: {
-                // Action when the button is tapped
-            }) {
+            NavigationLink{
+                TourismUIView().navigationBarHidden(true)
+            }label: {
                 Text("Lihat Semua")
                     .bold()
                     .font(.system(size: 16))
@@ -36,7 +41,7 @@ struct SectionOneUIView: View {
                         RoundedRectangle(cornerRadius: 8) // Rounded corners
                             .stroke(Color("Dark 2"), lineWidth: 1) // Border color and width
                     )
-            }.padding(.vertical,8)
+            }
         }
     }
 }
@@ -52,13 +57,13 @@ struct SectionOneItemView:View{
         NavigationLink{
             AppWebView(urlString: sectionData.mapLink ?? "", title: sectionData.titleID ?? "").navigationBarHidden(true)
         }label: {
-            VStack(alignment: .leading){
-                AppImageUIView(url: sectionData.thumbnail ?? "").cornerRadius(5).frame(width: 158,height: 159).scaledToFit()
-                Text(sectionData.tourismCategoryTitleID ?? "").bold().font(.system(size: 12)).foregroundStyle(Color("Dark 2"), Color("Dark 2"))
-                Text(sectionData.titleID ?? "").bold().font(.system(size: 17)).foregroundStyle(Color("Dark 1"), Color("Dark 1")).multilineTextAlignment(.leading)
+            VStack(alignment: .leading,spacing: 2){
+                ImageView(urlString: sectionData.thumbnail ?? "").cornerRadius(5).frame(width: 170,height: 159).scaledToFit()
+                Text(sectionData.tourismCategoryTitleID ?? "").bold().font(.system(size: 12)).foregroundStyle(Color("Dark 2"), Color("Dark 2")).padding(.top,4)
+                Text(sectionData.titleID ?? "").bold().font(Font.custom("Inter", size: 16)).foregroundStyle(Color("Dark 1"), Color("Dark 1")).multilineTextAlignment(.leading)
                     .lineLimit(2)
                     .truncationMode(.tail)
-                Text(sectionData.location ?? "").bold().font(.system(size: 12)).foregroundStyle(Color("IKN App Brown"), Color("IKN App Brown"))
+                Text(sectionData.location ?? "").bold().font(Font.custom("Inter", size: 12)).foregroundStyle(Color("IKN App Brown"), Color("IKN App Brown"))
                 
             }
         }

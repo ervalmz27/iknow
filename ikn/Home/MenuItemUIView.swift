@@ -15,22 +15,24 @@ struct MenuItemUIView: View {
     
     var body: some View {
             VStack{
-                AsyncImage(url: URL(string: menu.icon ?? "")) { phase in
-                                switch phase {
-                                case .success(let image):
-                                    image
-                                        .resizable()
-                                        .scaledToFit()
-                                case .failure:
-                                    Image(systemName: "photo")
-                                        .resizable()
-                                        .scaledToFit()
-                                case .empty:
-                                    ProgressView()
-                                @unknown default:
-                                    EmptyView()
-                                }
-                }.frame(
+//                AsyncImage(url: URL(string: menu.icon ?? "")) { phase in
+//                                switch phase {
+//                                case .success(let image):
+//                                    image
+//                                        .resizable()
+//                                        .scaledToFit()
+//                                case .failure:
+//                                    Image(systemName: "photo")
+//                                        .resizable()
+//                                        .scaledToFit()
+//                                case .empty:
+//                                    ProgressView()
+//                                @unknown default:
+//                                    EmptyView()
+//                                }
+//                }
+                ImageView(urlString: menu.icon ?? "")
+                .frame(
                     width: 48,
                     height: 48
                 )

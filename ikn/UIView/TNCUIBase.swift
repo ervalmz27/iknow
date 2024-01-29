@@ -45,13 +45,18 @@ struct TNCUIBase<Content: View>: View {
                             .bold()
                             .font(.system(size: 16))
                             .foregroundColor(Color.white)
-                            .padding(10) //
+                            .padding(14) //
                             .frame(maxWidth: .infinity, minHeight: 44)
                             .background(Color("Green 1"))
                             .cornerRadius(8)
                     }
-                    .padding()
-                    .background(Color.white)}}
+                    .padding(.vertical, 35).padding(.horizontal,14)
+                    
+                    .background(RoundedCorners(color: .white, tl: 15, tr: 15, bl: 0, br: 0))
+                    .frame(height: 50)
+                    .shadow(color: Color.gray, radius: 5, x: 0, y: 2)
+                    
+                }}
             
         }.foregroundColor(.white)
     }

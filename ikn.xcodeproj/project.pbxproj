@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		C92F178F2B303DCA00DF61A5 /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = C92F178E2B303DCA00DF61A5 /* MarkdownUI */; };
+		C93DBBEA2B5126F7006E0B01 /* Font in Resources */ = {isa = PBXBuildFile; fileRef = C93DBBE92B5126F7006E0B01 /* Font */; };
+		C93DBBEC2B512760006E0B01 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C93DBBEB2B512760006E0B01 /* Inter-Regular.ttf */; };
+		C93DBBEE2B512A07006E0B01 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C93DBBED2B512A07006E0B01 /* Inter-Bold.ttf */; };
+		C93DBBF02B512A09006E0B01 /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C93DBBEF2B512A09006E0B01 /* Inter-Black.ttf */; };
+		C93DDCC62B6786970085A49D /* TousrismDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93DDCC52B6786970085A49D /* TousrismDetails.swift */; };
+		C93E732B2B4FC65E005505C1 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93E732A2B4FC65E005505C1 /* RoundedCorner.swift */; };
+		C93E732F2B4FDBE1005505C1 /* TourismUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93E732E2B4FDBE1005505C1 /* TourismUIView.swift */; };
+		C93E73312B4FDC12005505C1 /* TourismViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93E73302B4FDC12005505C1 /* TourismViewModel.swift */; };
 		C988E8782B16D3CA00CDD650 /* HomeScreenViewBackup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C988E8772B16D3CA00CDD650 /* HomeScreenViewBackup.swift */; };
 		C988E87A2B16D41400CDD650 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C988E8792B16D41400CDD650 /* HomeViewModel.swift */; };
 		C988E87D2B171B8B00CDD650 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C988E87C2B171B8B00CDD650 /* WebView.swift */; };
@@ -65,6 +73,14 @@
 
 /* Begin PBXFileReference section */
 		C90C76032B43EF8D00FAE5D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C93DBBE92B5126F7006E0B01 /* Font */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Font; sourceTree = "<group>"; };
+		C93DBBEB2B512760006E0B01 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
+		C93DBBED2B512A07006E0B01 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
+		C93DBBEF2B512A09006E0B01 /* Inter-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Black.ttf"; sourceTree = "<group>"; };
+		C93DDCC52B6786970085A49D /* TousrismDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TousrismDetails.swift; sourceTree = "<group>"; };
+		C93E732A2B4FC65E005505C1 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
+		C93E732E2B4FDBE1005505C1 /* TourismUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourismUIView.swift; sourceTree = "<group>"; };
+		C93E73302B4FDC12005505C1 /* TourismViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourismViewModel.swift; sourceTree = "<group>"; };
 		C988E8772B16D3CA00CDD650 /* HomeScreenViewBackup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewBackup.swift; sourceTree = "<group>"; };
 		C988E8792B16D41400CDD650 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		C988E87C2B171B8B00CDD650 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
@@ -133,6 +149,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C93E732D2B4FDB9B005505C1 /* Tourism */ = {
+			isa = PBXGroup;
+			children = (
+				C93E732E2B4FDBE1005505C1 /* TourismUIView.swift */,
+				C93E73302B4FDC12005505C1 /* TourismViewModel.swift */,
+				C93DDCC52B6786970085A49D /* TousrismDetails.swift */,
+			);
+			name = Tourism;
+			sourceTree = "<group>";
+		};
 		C988E8762B163BF900CDD650 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +217,9 @@
 		C9C7B0FC2B0DC88A00CE2C2D = {
 			isa = PBXGroup;
 			children = (
+				C93DBBEF2B512A09006E0B01 /* Inter-Black.ttf */,
+				C93DBBED2B512A07006E0B01 /* Inter-Bold.ttf */,
+				C93DBBEB2B512760006E0B01 /* Inter-Regular.ttf */,
 				C9C7B1072B0DC88A00CE2C2D /* ikn */,
 				C9C7B1062B0DC88A00CE2C2D /* Products */,
 			);
@@ -207,6 +236,7 @@
 		C9C7B1072B0DC88A00CE2C2D /* ikn */ = {
 			isa = PBXGroup;
 			children = (
+				C93DBBE92B5126F7006E0B01 /* Font */,
 				C9D32F722B4D495700FC07C5 /* Image */,
 				C90C76032B43EF8D00FAE5D9 /* Info.plist */,
 				F7B838D72B29F708009D1869 /* Routing */,
@@ -248,6 +278,7 @@
 		C9C7B1232B0DFAD600CE2C2D /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				C93E732D2B4FDB9B005505C1 /* Tourism */,
 				C9E88DC72B29ABC8000B2865 /* Components */,
 				C9E88DCF2B29BB36000B2865 /* Healths */,
 				F721DB6F2B26C5EB00625D7F /* UIView */,
@@ -355,6 +386,7 @@
 				F721DB7A2B26F28700625D7F /* DottedSeparatorUIView.swift */,
 				F721DB802B26F7BC00625D7F /* AppImageUIView.swift */,
 				C9D32F7B2B4EABC600FC07C5 /* TNCUIBase.swift */,
+				C93E732A2B4FC65E005505C1 /* RoundedCorner.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -443,6 +475,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9C7B1102B0DC88C00CE2C2D /* Preview Assets.xcassets in Resources */,
+				C93DBBEA2B5126F7006E0B01 /* Font in Resources */,
+				C93DBBF02B512A09006E0B01 /* Inter-Black.ttf in Resources */,
+				C93DBBEE2B512A07006E0B01 /* Inter-Bold.ttf in Resources */,
+				C93DBBEC2B512760006E0B01 /* Inter-Regular.ttf in Resources */,
 				C9C7B10D2B0DC88C00CE2C2D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -485,9 +521,13 @@
 				C9E88DC22B2994A4000B2865 /* HealthViewModel.swift in Sources */,
 				C9D32F762B4D49AB00FC07C5 /* ImageViewModel.swift in Sources */,
 				F721DB832B27129300625D7F /* SectionTwoUIView.swift in Sources */,
+				C93DDCC62B6786970085A49D /* TousrismDetails.swift in Sources */,
+				C93E73312B4FDC12005505C1 /* TourismViewModel.swift in Sources */,
 				F721DB6D2B26C4B500625D7F /* TncViewModel.swift in Sources */,
+				C93E732F2B4FDBE1005505C1 /* TourismUIView.swift in Sources */,
 				F79B744F2B27E34900A30667 /* ContactsViewModel.swift in Sources */,
 				F721DB712B26C60000625D7F /* BaseUIView.swift in Sources */,
+				C93E732B2B4FC65E005505C1 /* RoundedCorner.swift in Sources */,
 				C988E87D2B171B8B00CDD650 /* WebView.swift in Sources */,
 				C9E88DCC2B29ACEC000B2865 /* HeathCategoryUiView.swift in Sources */,
 				F721DB752B26E35600625D7F /* HomeHeaderUIView.swift in Sources */,
@@ -635,7 +675,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_ASSET_PATHS = "\"ikn/Preview Content\"";
 				DEVELOPMENT_TEAM = MBN54724KP;
 				ENABLE_PREVIEWS = YES;
@@ -668,7 +708,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_ASSET_PATHS = "\"ikn/Preview Content\"";
 				DEVELOPMENT_TEAM = MBN54724KP;
 				ENABLE_PREVIEWS = YES;

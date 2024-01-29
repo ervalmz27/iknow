@@ -31,7 +31,8 @@ struct BaseUIView<Content: View>: View {
                 }
                 ZStack{
                     Color.white.ignoresSafeArea()
-                    content.padding(16)
+                    ScrollView{
+                        content.padding(16)}
                 }.cornerRadius(12)
             }.padding(16)
         }.foregroundColor(.white)

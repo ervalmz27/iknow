@@ -25,13 +25,25 @@ struct AppWebView : View{
                     Image(systemName: "arrow.backward").padding(.leading).bold().foregroundColor(Color("Dark 1"))
                 }
                 Spacer()
-                Text(title).font(.system(size: 18).bold()).foregroundStyle(Color("Dark 1"))
+                Text(title).font(.system(size: 18).bold()).foregroundStyle(Color("Dark 1")).multilineTextAlignment(.leading)
+                    .lineLimit(2)
+                    .truncationMode(.tail)
                 Spacer()
                 Image(systemName: "house").padding(.trailing)
             }
             Divider()
             WebView(urlString: urlString)
         }
+    }
+}
+extension UINavigationController: UIGestureRecognizerDelegate {
+    override open func viewDidLoad() {
+        super.viewDidLoad()
+        interactivePopGestureRecognizer?.delegate = self
+    }
+    
+    public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        return viewControllers.count > 1
     }
 }
 struct WebView: UIViewRepresentable {

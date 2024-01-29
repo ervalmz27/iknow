@@ -18,23 +18,10 @@ struct HomeMainLinkUIView: View {
             AppWebView(urlString: mainLink?.link ?? "", title: mainLink?.titleID ?? "").navigationBarHidden(true)
         }label: {
             VStack(alignment: .leading){
-                Text(mainLink?.titleID ?? "").bold().font(.system(size: 18)).foregroundStyle(Color("Dark 1"))
-                    AsyncImage(url: URL(string: mainLink?.thumbnail ?? "")) { phase in
-                                    switch phase {
-                                    case .success(let image):
-                                        image
-                                            .resizable()
-                                            .scaledToFit()
-                                    case .failure:
-                                        Image(systemName: "ErrorImage")
-                                            .resizable()
-                                            .scaledToFit()
-                                    case .empty:
-                                        ProgressView()
-                                    @unknown default:
-                                        EmptyView()
-                                    }
-                    }
+                Text(mainLink?.titleID ?? "").foregroundStyle(Color("Dark 1")).font(Font.custom("Inter", size: 18)).bold()
+
+                ImageView(urlString: mainLink?.thumbnail ?? "").cornerRadius(5)
+                                                            .scaledToFit()
                 Text(mainLink?.subtitleID ?? "")
                     .font(.system(size: 14, weight: .regular))
                     .foregroundStyle(Color("Dark 1"))

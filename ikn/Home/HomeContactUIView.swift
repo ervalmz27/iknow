@@ -17,7 +17,7 @@ struct HomeContactUIView: View {
             openMailApp()
         }, label: {
             VStack(alignment: .leading){
-                Text("\(contact?.titleID ?? "")").bold().font(.system(size: 18)).padding(.bottom,4).foregroundColor(Color.black)
+                Text("\(contact?.titleID ?? "")").foregroundStyle(Color("Dark 1")).font(Font.custom("Inter", size: 18)).bold()
                 AppImageUIView(url: contact?.thumbnail ?? "").frame(
                     height: 159
                 ).cornerRadius(5).padding(.bottom,8)
