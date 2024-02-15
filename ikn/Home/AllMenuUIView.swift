@@ -18,29 +18,7 @@ struct AllMenuUIView: View {
                 VStack(alignment: .leading){
                     ForEach(menus ?? [],id: \.id){ item in
                         if(item.titleID != "Lihat Semua Fitur"){
-//                            NavigationLink{
-//                                
-//                                if(item.isUnderDevelopment == false){
-//                                    if(item.path != nil){
-//                                        let path = item.titleID
-//                                        if path == "Daftar Kontak Darurat" {
-//                                            ContactsUIView().navigationBarHidden(true)
-//                                        } else if path == "Pelayanan Kesehatan" {
-//                                            HealtUIView().navigationBarHidden(true)
-//                                        } else if path == "population-services" {
-//                                            Text("Population Service")
-//                                        } else if path == "topup-bills" {
-//                                            Text("Top Up")
-//                                        } else if path == "public-transportation" {
-//                                            Text("Public Transportation")
-//                                        } 
-//                                    }else{
-//                                        AppWebView(urlString: item.url ?? "", title: item.titleID ?? "").navigationBarHidden(true)
-//                                    }
-//                                }
-//                            } label: {
-//                                AllMenuItem(menu: item)
-//                            }
+
                             
                             NavigationLink(
                                 destination: {
@@ -83,9 +61,11 @@ struct AllMenuItem : View {
     var body: some View {
         VStack{
             HStack(alignment: .center){
-                AppImageUIView(url: menu.icon ?? "").frame(width: 48, height: 48).padding(.leading,8)
-                Text("\(menu.titleID ?? "")").font(.system(size: 16)).foregroundStyle(Color("Dark 1"))
-                Spacer()
+                if(menu.isUnderDevelopment == false){
+                    AppImageUIView(url: menu.icon ?? "").frame(width: 48, height: 48).padding(.leading,8)
+                    Text("\(menu.titleID ?? "")").font(.system(size: 16)).foregroundStyle(Color("Dark 1"))
+                    Spacer()
+                }
                 if(menu.isUnderDevelopment == true){
                     
                     Text("SEGERA HADIR")
