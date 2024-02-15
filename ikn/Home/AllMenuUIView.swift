@@ -66,16 +66,16 @@ struct AllMenuItem : View {
                     Text("\(menu.titleID ?? "")").font(.system(size: 16)).foregroundStyle(Color("Dark 1"))
                     Spacer()
                 }
-                if(menu.isUnderDevelopment == true){
-                    
-                    Text("SEGERA HADIR")
-                                .font(.system(size: 8))
-                                .padding(2)
-                                .padding(.horizontal, 4)
-                                .foregroundColor(.white)
-                                .background(Color("Primary Action Color"))
-                                .cornerRadius(12)
-                }
+//                if(menu.isUnderDevelopment == true){
+//                    
+//                    Text("SEGERA HADIR")
+//                                .font(.system(size: 8))
+//                                .padding(2)
+//                                .padding(.horizontal, 4)
+//                                .foregroundColor(.white)
+//                                .background(Color("Primary Action Color"))
+//                                .cornerRadius(12)
+//                }
             }
             DottedSeparator(color: Color(hex: 0xDDDDDD), lineWidth: 1, dash: [4, 4])
                             .padding(.bottom, 8)

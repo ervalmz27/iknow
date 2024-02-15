@@ -72,4 +72,4 @@ struct LoadingView:View {
 #Preview {
     HomeUIView()
 }
-c
+
