@@ -9,15 +9,7 @@ import SwiftUI
 
 struct HomeUIView: View {
     @ObservedObject var viewModel = HomeViewModel()
-//    init(){
-//        for family in UIFont.familyNames {
-//             print(family)
-//
-//             for names in UIFont.fontNames(forFamilyName: family){
-//             print("== \(names)")
-//             }
-//        }
-//    }
+
     var body: some View {
         NavigationView{
             VStack{

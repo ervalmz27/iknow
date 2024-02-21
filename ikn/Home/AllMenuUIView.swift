@@ -77,8 +77,10 @@ struct AllMenuItem : View {
 //                                .cornerRadius(12)
 //                }
             }
-            DottedSeparator(color: Color(hex: 0xDDDDDD), lineWidth: 1, dash: [4, 4])
-                            .padding(.bottom, 8)
+            if(menu.isUnderDevelopment == false){
+                DottedSeparator(color: Color(hex: 0xDDDDDD), lineWidth: 1, dash: [4, 4])
+                    .padding(.bottom, 8)
+            }
         }
     }
 }
